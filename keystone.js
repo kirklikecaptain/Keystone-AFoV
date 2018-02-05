@@ -28,6 +28,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+	
 });
 keystone.import('models');
 keystone.set('locals', {
@@ -39,8 +40,11 @@ keystone.set('locals', {
 keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
+	artists: 'artists',
+	sessions: 'sessions',
 	posts: ['posts', 'post-categories'],
 	enquiries: 'enquiries',
+	contributors: 'contributors',
 	users: 'users',
 });
 
