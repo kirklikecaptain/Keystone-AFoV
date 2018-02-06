@@ -1,0 +1,38 @@
+.footer {
+	background: $grey-700;
+	padding: 20px;
+}
+
+.footer-column {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-header {
+	color: $grey-900;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	font-family: $slab;
+	border-bottom: 1px solid $grey-900;
+}
+
+.footer-link {
+	display: inline-block;
+	align-self: flex-start;
+	font-size: 14px;
+	color: $white;
+	text-decoration: none;
+	padding: 10px 0px;
+  &:hover {
+		text-decoration: underline;
+	}
+}
+
+@media (min-width:650px) {
+	.footer-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-column-gap: 20px;
+	}
+}
