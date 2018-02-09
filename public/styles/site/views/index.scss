@@ -1,0 +1,155 @@
+.hero-box {
+	padding: 13px 10px;
+	color: white;
+}
+
+.hero-text {
+	padding: 10px;
+}
+
+.hero-band-name {
+	color: $white;
+	font-size: 28px;
+	font-family: $slab;
+	padding-bottom: 3px;
+}
+
+.hero-song-title {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	padding-bottom: 6px;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.hero-border {
+	border: solid $white 10px;
+}
+
+.hero-description {
+	font-size: 18px;
+	line-height: 1.6rem;
+}
+
+.hero-description {
+
+}
+
+.watch-button {
+	margin-top: 20px;
+	font-family: $slab;
+	background: $grey-50;
+	color: $white;
+	display: inline-block;
+	padding: 10px 25px;
+	border-radius: 100px;
+	text-decoration: none;
+	&:hover {
+		transform: translateY(-1px);
+		background: $white;
+	}
+}
+
+.recent-background{
+	background: $grey-50;
+}
+
+.recent-videos {
+	display: grid;
+	grid-template-rows: auto;
+	grid-row-gap: 10px;
+	padding: 10px;
+}
+
+.video-card {
+	background: $white;
+}
+
+.card-thumbnail {
+	display: block;
+	position: relative;
+}
+
+.thumb-image {
+	width: 100%;
+	display: block;
+}
+
+.thumb-overlay {
+	position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  mix-blend-mode: color;
+  opacity: 1;
+  transition: .2s ease opacity;
+	&:hover {
+		opacity: 0;
+	}
+}
+
+.card-text {
+	padding: 10px 15px 15px 15px;
+}
+
+.card-band-name {
+	padding-bottom: 3px;
+	font-size: 26px;
+	font-family: $slab;
+}
+
+.card-song-title {
+	display: block;
+	padding-bottom: 6px;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+@media (min-width: 650px) {
+	.hero-box {
+		padding: 25px 20px;
+		color: white;
+	}
+	.recent-videos {
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+	}
+}
+
+@media (min-width: 900px) {
+	.hero-box {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.hero-adjust {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.hero-text {
+		padding: 0px 20px;
+	}
+
+	.recent-videos {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media (min-width: 1200px) {
+	.hero-box {
+		padding: 25px 0px;
+	}
+
+	.hero-text {
+		padding: 0px 20px;
+	}
+
+	.recent-videos {
+		padding: 10px 0px;
+	}
+}

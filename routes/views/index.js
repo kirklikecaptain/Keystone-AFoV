@@ -10,12 +10,20 @@ exports = module.exports = function (req, res) {
 	// item in the header navigation.
 	locals.section = 'home';
 
-	//grabs last 7
-
-	view.query('recent', keystone.list('Session').model
+	view.query('hero', keystone.list('Session')
+		.model
 		.find()
 		.sort('-publishedDate')
-		.limit(4)
+		.limit(1)
+		.populate('artist')
+	);
+
+	view.query('recent', keystone.list('Session')
+		.model
+		.find()
+		.sort('-publishedDate')
+		.skip(1) //skips most recent
+		.limit(6)
 		.populate('artist')
 	);
 

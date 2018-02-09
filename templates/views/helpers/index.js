@@ -207,6 +207,11 @@ module.exports = function () {
 		return ('/blog/' + categorySlug);
 	};
 
+	// redirect to specific video URL with songTitle as URL
+	_helpers.sessionUrl = function (videoSlug, options) {
+		return ('/sessions/' + videoSlug);
+	};
+
 	// ### Pagination Helpers
 	// These are helpers used in rendering a pagination system for content
 	// Mostly generalized and with a small adjust to `_helper.pageUrl` could be universal for content types

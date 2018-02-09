@@ -1,2 +1,44 @@
-<div class="limiter">
+{{# each hero}}
+	<div class="hero" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),{{artist.artistColor}};">
+		<div class="limiter hero-box">
+			<div class="video-card hero-border">
+				<a class="card-thumbnail" href="{{sessionUrl slug}}">
+					<img class="thumb-image" src="{{thumbnail.secure_url}}" alt="{{songTitle}}">
+					<div class="thumb-overlay hero-adjust" style="background: {{artist.artistColor}};"></div>
+				</a>
+			</div>
+			<div class="hero-text">
+				<p class="hero-band-name">{{artist.artistName}}</p>
+				<a class="hero-song-title" style="color: {{artist.artistColor}}" href="{{sessionUrl slug}}">{{songTitle}}</a>
+				<p class="hero-description" >{{shortDescription}}</p>
+				<a href="#" class="watch-button" style="background: {{artist.artistColor}}">▶&nbsp;&nbsp;&nbsp;Watch</a>
+			</div>
+		</div>
+	</div>
+	<style>
+		.header {
+			background: {{artist.artistColor}};
+		}
+	</style>
+
+
+{{/each}}
+
+<div class="recent-background">
+	<div class="limiter">
+		<div class="recent-videos">
+			{{# each recent}}
+				<div class="video-card">
+					<a class="card-thumbnail" href="{{sessionUrl slug}}">
+						<img class="thumb-image" src="{{thumbnail.secure_url}}" alt="{{songTitle}}">
+						<div class="thumb-overlay" style="background: {{artist.artistColor}};"></div>
+					</a>
+					<div class="card-text">
+						<p class="card-band-name">{{artist.artistName}}</p>
+						<a class="card-song-title" style="color: {{artist.artistColor}};"  href="{{sessionUrl slug}}">{{songTitle}}</a>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	</div>
 </div>
