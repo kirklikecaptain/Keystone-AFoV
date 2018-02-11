@@ -28,7 +28,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	
+
 });
 keystone.import('models');
 keystone.set('locals', {
