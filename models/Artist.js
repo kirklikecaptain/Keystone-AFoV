@@ -17,7 +17,5 @@ Artist.add({
 
 //revisit this
 Artist.relationship({ ref: 'Session', refPath: 'artist' });
-
-
-// Artist.defaultSort = '-artistName'; this may break things
+Artist.defaultColumns = 'artistName|25%, artistColor|15%, artistPicture|15%, artistBio|35%';
 Artist.register();

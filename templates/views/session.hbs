@@ -1,1 +1,48 @@
-session
+<style>
+	.header {
+		background-color: {{data.session.artist.artistColor}};
+	}
+</style>
+
+<div class="video-backdrop">
+  <div class="video-limiter">
+
+    <div class="video-section">
+      <div class="video-player">
+				<!-- change autoplay to 1 before deployment-->
+        <iframe id="ytplayer" type="text/html" width="560" height="349" src="https://www.youtube.com/embed/{{data.session.youtubeVideoID}}?autoplay=0&modestbranding=1&color=white"frameborder="0" style="margin-bottom: -4px;" allowfullscreen></iframe>
+      </div>
+
+      <div class="video-text">
+        <h1>{{data.session.artist.artistName}}</h1>
+        <h2 style="color:{{data.session.artist.artistColor}};">
+            {{data.session.songTitle}}
+        </h2>
+				<p>Published: {{ data.session._.uploadDate.format "MMM D Y" }}</p>
+        {{{data.session.shortDescription}}}
+				<p>Band Info</p>
+				{{{data.session.artist.artistBio}}}
+				<h3>Contributors</h3>
+				{{#each data.session.contributors}}
+					<p>{{name}}</p>
+				{{/each}}
+        <h3>Subscribe</h3>
+        <script src="https://apis.google.com/js/platform.js"></script>
+        <div class="g-ytsubscribe" data-channel="AFistfulOfVinyl" data-layout="full" data-count="default"></div>
+      </div>
+    </div>
+
+    <div class="related-videos">
+      <p style="background: {{data.session.artist.artistColor}}">More by {{data.session.artist.artistName}}</p>
+      <div class="dummy">
+
+      </div>
+      <div class="dummy">
+
+      </div>
+      <div class="dummy">
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,24 +4,27 @@ exports = module.exports = function (req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 
-	locals.section = 'sessions';
+	locals.section = 'artists';
 	locals.filters = {
-		session: req.params.session,
+		artist: req.params.artist,
 	};
 	locals.data = {
-		session: [],
+		artist: [],
 	};
 
 	view.on('init', function (next) {
-		var q = keystone.list('Session').model.findOne({
-			slug: locals.filters.session,
-		}).populate('artist').populate('contributors');
+		var q = keystone.list('Artist').model.findOne({
+			slug: locals.filters.artist,
+		});
 
 		q.exec(function (err, result) {
-			locals.data.session = result;
+			locals.data.artist = result;
 			next();
 		});
+
+		//query for sessions where artist = this?
+
 	});
 
-	view.render('session');
+	view.render('artist');
 };

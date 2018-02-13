@@ -13,9 +13,10 @@ Session.add({
 	artist: { type: Types.Relationship, ref: 'Artist' },
 	thumbnail: { type: Types.CloudinaryImage },
 	youtubeVideoID: { type: String },
-	publishedDate: { type: Types.Date },
+	uploadDate: { type: Types.Date},
 	shortDescription: { type: Types.Textarea, height: 60 },
 	contributors: { type: Types.Relationship, ref: 'Contributor', many: true },
 });
 
+Session.defaultColumns = 'songTitle, artist, thumbnail, youtubeVideoID, uploadDate'
 Session.register();

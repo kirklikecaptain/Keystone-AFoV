@@ -13,7 +13,7 @@ exports = module.exports = function (req, res) {
 	view.query('hero', keystone.list('Session')
 		.model
 		.find()
-		.sort('-publishedDate')
+		.sort('-uploadDate')
 		.limit(1)
 		.populate('artist')
 	);
@@ -21,8 +21,8 @@ exports = module.exports = function (req, res) {
 	view.query('recent', keystone.list('Session')
 		.model
 		.find()
-		.sort('-publishedDate')
-		.skip(1) //skips most recent
+		.sort('-uploadDate')
+		.skip(1)
 		.limit(6)
 		.populate('artist')
 	);

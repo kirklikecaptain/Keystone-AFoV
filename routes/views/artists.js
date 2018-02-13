@@ -6,7 +6,12 @@ exports = module.exports = function (req, res) {
 
 	locals.section = 'artists';
 
-	view.query('artists', keystone.list('Artist').model.find());
+	view.query(
+		'artists',
+		keystone.list('artists').model
+		.find()
+		.sort('artistName')
+	);
 
 	view.render('artists');
 };

@@ -39,9 +39,9 @@
 }
 
 .watch-button {
-	margin-top: 20px;
+	margin-top: 10px;
 	font-family: $slab;
-	background: $grey-50;
+	background: $grey-100;
 	color: $white;
 	display: inline-block;
 	padding: 10px 25px;
@@ -54,7 +54,7 @@
 }
 
 .recent-background{
-	background: $grey-50;
+	background: $grey-100;
 }
 
 .recent-videos {
@@ -147,6 +147,22 @@
 
 	.hero-text {
 		padding: 0px 20px;
+		margin-left: -100px;
+		z-index: 10;
+	}
+
+	.hero-band-name {
+		padding: 30px 0px 10px 0px;
+		font-size: 60px;
+	}
+
+	.hero-song-title {
+		font-size: 25px;
+		padding: 10px 20px;
+	}
+
+	.hero-description {
+		padding: 20px 0px 10px 0px;
 	}
 
 	.recent-videos {

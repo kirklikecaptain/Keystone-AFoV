@@ -174,9 +174,9 @@ body {
   line-height: 1.6rem; }
 
 .watch-button {
-  margin-top: 20px;
+  margin-top: 10px;
   font-family: "Roboto Slab";
-  background: #ECEFF1;
+  background: #CFD8DC;
   color: #fff;
   display: inline-block;
   padding: 10px 25px;
@@ -187,7 +187,7 @@ body {
     background: #fff; }
 
 .recent-background {
-  background: #ECEFF1; }
+  background: #CFD8DC; }
 
 .recent-videos {
   display: grid;
@@ -258,6 +258,120 @@ body {
   .hero-box {
     padding: 25px 0px; }
   .hero-text {
-    padding: 0px 20px; }
+    padding: 0px 20px;
+    margin-left: -100px;
+    z-index: 10; }
+  .hero-band-name {
+    padding: 30px 0px 10px 0px;
+    font-size: 60px; }
+  .hero-song-title {
+    font-size: 25px;
+    padding: 10px 20px; }
+  .hero-description {
+    padding: 20px 0px 10px 0px; }
   .recent-videos {
     padding: 10px 0px; } }
+
+.video-backdrop {
+  background: #263238; }
+
+.video-limiter {
+  max-width: 1200px;
+  margin: 0px auto; }
+
+.video-player {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 0px;
+  height: 0; }
+
+.video-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.video-text {
+  background: white;
+  padding: 5px 20px 10px 10px; }
+  .video-text h1 {
+    font-family: "Roboto Slab";
+    padding-bottom: 10px; }
+  .video-text h2 {
+    font-family: "Roboto";
+    padding-bottom: 10px; }
+  .video-text h3 {
+    font-family: "Roboto Slab";
+    padding-bottom: 20px; }
+  .video-text p {
+    padding-bottom: 10px; }
+
+.related-videos {
+  padding: 10px;
+  background: white; }
+  .related-videos p {
+    padding: 10px;
+    color: white;
+    font-family: "Roboto Slab";
+    margin-bottom: 10px; }
+  .related-videos .dummy {
+    width: 100%;
+    height: 70px;
+    background: white;
+    margin-bottom: 10px;
+    border: solid 1px black; }
+  .related-videos .dummy:last-child {
+    margin-bottom: 0; }
+
+@media (min-width: 900px) {
+  .video-limiter {
+    display: grid;
+    grid-template-columns: auto 300px; }
+  .video-text {
+    padding: 30px 80px 40px 40px; }
+  .related-videos {
+    padding: 25px;
+    background: none; }
+    .related-videos .dummy, .related-videos p {
+      margin-bottom: 20px; } }
+
+.artists-bg {
+  background: #CFD8DC; }
+
+.artists-grid {
+  padding: 10px;
+  display: grid;
+  grid-row-gap: 10px; }
+
+.artist-card {
+  display: block;
+  text-decoration: none;
+  display: grid; }
+
+.artist-card-pic-box {
+  display: grid;
+  padding: 20px; }
+
+.artist-card-pic {
+  border-radius: 100%;
+  width: 200px;
+  justify-self: center; }
+
+.artist-card-name {
+  padding: 20px;
+  justify-self: center;
+  color: #fff; }
+
+@media (min-width: 650px) {
+  .artists-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px; } }
+
+@media (min-width: 1200px) {
+  .artists-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 0px;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px; } }

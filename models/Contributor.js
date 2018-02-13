@@ -20,4 +20,6 @@ Contributor.add({
 
 Contributor.relationship({ ref: 'Session', refPath: 'contributors' });
 
+Contributor.defaultColumns = 'name, mugshot, emailAddress'
+
 Contributor.register();

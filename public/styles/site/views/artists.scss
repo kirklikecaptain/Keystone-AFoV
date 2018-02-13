@@ -1,0 +1,48 @@
+.artists-bg {
+	background: $grey-100;
+}
+
+.artists-grid {
+	padding: 10px;
+	display: grid;
+	grid-row-gap: 10px;
+}
+
+.artist-card {
+	display: block;
+	text-decoration: none;
+	display: grid;
+}
+
+.artist-card-pic-box {
+	display: grid;
+	padding: 20px;
+}
+
+.artist-card-pic {
+	border-radius: 100%;
+	width: 200px;
+	justify-self: center;
+}
+
+.artist-card-name {
+	padding: 20px;
+	justify-self: center;
+	color: $white;
+}
+
+@media (min-width: 650px) {
+	.artists-grid {
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 10px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.artists-grid {
+		grid-template-columns: 1fr 1fr 1fr;
+		padding: 20px 0px;
+		grid-row-gap: 20px;
+		grid-column-gap: 20px;
+	}
+}
