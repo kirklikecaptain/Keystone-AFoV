@@ -3,7 +3,7 @@
 }
 
 .video-limiter {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0px auto;
 }
 
@@ -22,12 +22,28 @@
 	height: 100%;
 }
 
+.video-info-box {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+
+.video-band-pic {
+	margin: 5px 0px 0px 5px;
+	width: 80px;
+	border-radius: 50%;
+	display: block;
+}
+
+.video-song-info {
+	padding-left: 15px;
+}
+
 .video-text {
   background: white;
-  padding: 5px 20px 10px 10px;
+  padding: 10px;
   h1 {
 		font-family: $slab;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
   }
 
   h2 {
@@ -37,7 +53,7 @@
 
 	h3 {
 		font-family: $slab;
-		padding-bottom: 20px;
+		padding: 20px 0px;
 	}
 
 

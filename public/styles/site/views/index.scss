@@ -1,171 +1,228 @@
-.hero-box {
-	padding: 13px 10px;
-	color: white;
+.hero-background {
+	height: 200px;
+	margin-bottom: -180px;
 }
 
-.hero-text {
-	padding: 10px;
+.hero {
+	padding: 0px 20px;
 }
 
-.hero-band-name {
-	color: $white;
-	font-size: 28px;
+.hero-image-section {
+	position: relative;
+	overflow: hidden;
+	align-self: start;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.hero-image {
+	width: 100%;
+	display: block;
+	z-index: -1;
+}
+
+.hero-band {
 	font-family: $slab;
-	padding-bottom: 3px;
+	font-size: 36px;
+	margin-bottom: 3px;
 }
 
-.hero-song-title {
-	display: inline-block;
+.hero-song {
+	display: block;
 	color: white;
-	text-decoration: none;
-	font-size: 20px;
-	padding-bottom: 6px;
-	&:hover {
-		text-decoration: underline;
-	}
-}
-
-.hero-border {
-	border: solid $white 10px;
+	font-size: 22px;
+	padding: 10px;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .hero-description {
-	font-size: 18px;
-	line-height: 1.6rem;
-}
-
-.hero-description {
-
+	margin-top: 10px;
+	line-height: 1.4em;
 }
 
 .watch-button {
-	margin-top: 10px;
-	font-family: $slab;
-	background: $grey-100;
-	color: $white;
-	display: inline-block;
-	padding: 10px 25px;
+	display: block;
+	padding: 15px;
 	border-radius: 100px;
+	color: white;
+	text-align: center;
 	text-decoration: none;
+	margin: 10px 0px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
 	&:hover {
-		transform: translateY(-1px);
-		background: $white;
+		transform: translateY(-2px);
 	}
 }
 
-.recent-background{
-	background: $grey-100;
+.overlay {
+	position: absolute;
+	left: -1px;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	opacity: 1;
+	mix-blend-mode: color;
+	transition: all 300ms ease;
 }
 
-.recent-videos {
+.video-card:hover .overlay {
+	opacity: 0;
+	transform: scale(1.1);
+}
+
+.hero-image-section:hover .overlay {
+	opacity: 0;
+}
+
+.recent-sessions-box {
+	padding: 20px;
+	h2 {
+		font-family: $slab;
+		padding-bottom: 20px;;
+	}
+}
+
+.recent-sessions {
 	display: grid;
-	grid-template-rows: auto;
-	grid-row-gap: 10px;
-	padding: 10px;
+	grid-row-gap: 20px;
 }
 
 .video-card {
-	background: $white;
-}
-
-.card-thumbnail {
 	display: block;
-	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+	text-decoration: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
 }
 
-.thumb-image {
+.card-image-section {
+	position: relative;
+	overflow: hidden;
+	padding: 20px;
+}
+
+.card-image {
 	width: 100%;
 	display: block;
+	z-index: -1;
 }
 
-.thumb-overlay {
-	position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  mix-blend-mode: color;
-  opacity: 1;
-  transition: .2s ease opacity;
-	&:hover {
-		opacity: 0;
-	}
+.card-info {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-column-gap: 15px;
+	padding: 20px;
+	height: 100%;
 }
 
-.card-text {
-	padding: 10px 15px 15px 15px;
+.card-band-photo {
+	width: 60px;
+	border-radius: 50%;
 }
 
-.card-band-name {
-	padding-bottom: 3px;
-	font-size: 26px;
+.band-name {
 	font-family: $slab;
+	color: white;
+	font-size: 24px;
+}
+.song-name {
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 18px;
 }
 
-.card-song-title {
-	display: block;
-	padding-bottom: 6px;
-	font-size: 20px;
-	text-decoration: none;
-}
 
-@media (min-width: 650px) {
-	.hero-box {
-		padding: 25px 20px;
+
+
+@media (min-width:900px) and (max-width:1399px) {
+	.hero-description {
 		color: white;
-	}
-	.recent-videos {
-		grid-template-columns: 1fr 1fr;
-		grid-column-gap: 10px;
-		grid-row-gap: 10px;
+		max-height: 7em;
+		overflow: hidden;
+		text-overflow: clip;
 	}
 }
 
 @media (min-width: 900px) {
-	.hero-box {
+
+	.hero .limiter {
+		height: 100%;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-	}
-	.hero-adjust {
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
-	}
-	.hero-text {
-		padding: 0px 20px;
+		grid-column-gap: 20px;
 	}
 
-	.recent-videos {
+	.hero-background {
+		height: 310px;
+		margin-bottom: -290px;
+	}
+
+	.hero-band {
+		color: white;
+		font-size: 50px;
+	}
+
+	.hero-song {
+		display: inline-block;
+		padding: 15px;
+		font-size: 30px;
+	}
+
+	.hero-description {
+		color: white;
+	}
+
+	.watch-button {
+		display: inline-block;
+		padding: 15px 25px;
+	}
+
+	.recent-sessions {
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 20px;
+	}
+
+}
+
+@media (min-width: 1200px) {
+	.recent-sessions {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
 
-@media (min-width: 1200px) {
-	.hero-box {
-		padding: 25px 0px;
+@media (min-width: 1420px) {
+	.hero-background {
+		height: 200px;
+		margin-bottom: -180px;
 	}
 
 	.hero-text {
-		padding: 0px 20px;
+		padding-top: 30px;
 		margin-left: -100px;
-		z-index: 10;
+		z-index: 20;
 	}
 
-	.hero-band-name {
-		padding: 30px 0px 10px 0px;
-		font-size: 60px;
+	.hero-band {
+		font-size: 80px;
+		margin-bottom: 5px;
 	}
 
-	.hero-song-title {
-		font-size: 25px;
-		padding: 10px 20px;
+	.hero-song {
+		display: inline-block;
+		font-size: 40px;
 	}
 
 	.hero-description {
-		padding: 20px 0px 10px 0px;
+		color: #333;
 	}
 
-	.recent-videos {
-		padding: 10px 0px;
+	.hero-description, .watch-button {
+		margin-top: 20px;
+		margin-left: 100px;
 	}
+
+	.recent-sessions-box {
+		padding: 0px 0px 20px 0px;
+	}
+
 }

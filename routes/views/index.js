@@ -23,7 +23,7 @@ exports = module.exports = function (req, res) {
 		.find()
 		.sort('-uploadDate')
 		.skip(1)
-		.limit(6)
+		.limit(9)
 		.populate('artist')
 	);
 

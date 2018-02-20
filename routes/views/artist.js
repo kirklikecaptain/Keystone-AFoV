@@ -22,9 +22,10 @@ exports = module.exports = function (req, res) {
 			next();
 		});
 
-		//query for sessions where artist = this?
 
 	});
+
+
 
 	view.render('artist');
 };

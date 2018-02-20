@@ -1,11 +1,11 @@
 <div class="artists-bg">
 	<div class="limiter artists-grid">
 		{{#each artists}}
-			<a class="artist-card" href="{{artistUrl slug}}" style="background: {{artistColor}};">
-				<div class="artist-card-pic-box" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),{{artistColor}};">
-					<img class="artist-card-pic" src="{{artistPicture.secure_url}}" style="border: 8px solid white; "alt="">
+			<a class="artist-card" href="{{artistUrl slug}}">
+				<div class="artist-card-pic-box">
+					<img class="artist-card-pic shadow" src="{{artistPicture.secure_url}}" style="border: 10px solid white; "alt="">
 				</div>
-				<h2 class="artist-card-name">{{artistName}}</h2>
+				<h2 class="artist-card-name shadow" style="background: {{artistColor}};">{{artistName}}</h2>
 			</a>
 		{{/each}}
 	</div>

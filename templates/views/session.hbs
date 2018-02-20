@@ -14,13 +14,17 @@
       </div>
 
       <div class="video-text">
-        <h1>{{data.session.artist.artistName}}</h1>
-        <h2 style="color:{{data.session.artist.artistColor}};">
-            {{data.session.songTitle}}
-        </h2>
-				<p>Published: {{ data.session._.uploadDate.format "MMM D Y" }}</p>
+				<div class="video-info-box">
+					<img class="video-band-pic" src="{{data.session.artist.artistPicture.secure_url}}" style="border: 5px solid {{data.session.artist.artistColor}};" alt="">
+					<div class="video-song-info">
+						<h1>{{data.session.artist.artistName}}</h1>
+		        <h2 style="color:{{data.session.artist.artistColor}};">{{data.session.songTitle}}</h2>
+					</div>
+				</div>
+				<h3>Session Info</h3>
+				<p>Uploaded: {{ data.session._.uploadDate.format "MMM D Y" }}</p>
         {{{data.session.shortDescription}}}
-				<p>Band Info</p>
+				<h3>Band Info</h3>
 				{{{data.session.artist.artistBio}}}
 				<h3>Contributors</h3>
 				{{#each data.session.contributors}}
