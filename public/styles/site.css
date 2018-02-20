@@ -436,3 +436,47 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 20px 0px;
     grid-column-gap: 20px; } }
+
+.contact-header {
+  padding: 20px 20px 0px 20px;
+  font-family: "Roboto Slab"; }
+
+.contact-form {
+  padding: 20px; }
+  .contact-form label {
+    color: #90A4AE;
+    display: block;
+    font-size: 12px;
+    margin: 20px 0px 10px 0px; }
+  .contact-form input, .contact-form textarea {
+    display: block;
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px #999 solid; }
+  .contact-form textarea:focus, .contact-form input:focus {
+    outline: none;
+    border: 1px #C62828 solid; }
+  .contact-form .form-control {
+    width: 100%;
+    max-width: 600px; }
+  .contact-form .contact-button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 50px;
+    background: #C62828;
+    color: white; }
+    .contact-form .contact-button:hover {
+      transform: translateY(-2px); }
+    .contact-form .contact-button:focus {
+      outline: none; }
+
+.alert-danger {
+  padding: 20px;
+  margin: 20px;
+  max-width: 600px;
+  color: #C62828;
+  background-color: #EF9A9A; }
+  .alert-danger li {
+    margin-left: 20px; }

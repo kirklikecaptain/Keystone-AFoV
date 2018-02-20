@@ -1,0 +1,59 @@
+.contact-header {
+	padding: 20px 20px 0px 20px;
+	font-family: $slab;
+}
+
+.contact-form {
+	padding: 20px;
+	label {
+		color: $grey-300;
+		display: block;
+		font-size: 12px;
+		margin: 20px 0px 10px 0px;
+	}
+
+	input, textarea {
+		display: block;
+		border-radius: 3px;
+		font-size: 20px;
+		padding: 10px;
+		border: 1px #999 solid;
+	}
+
+
+	textarea:focus, input:focus {
+		outline: none;
+		border: 1px $accent-mid solid;
+	}
+
+	.form-control {
+		width: 100%;
+		max-width: 600px;
+	}
+
+	.contact-button {
+		padding: 10px 15px;
+		margin-top: 10px;
+		border: none;
+		border-radius: 50px;
+		background: $accent-mid;
+		color: white;
+		&:hover {
+			transform: translateY(-2px);
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.alert-danger {
+	padding: 20px;
+	margin: 20px;
+	max-width: 600px;
+	color: $accent-mid;
+	background-color: $accent-light;
+	li {
+		margin-left: 20px;
+	}
+}
