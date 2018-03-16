@@ -1,1 +1,23 @@
-sessions
+<div class="container section">
+	<h5>Sessions</h5>
+	<div class="row">
+		{{# each sessions}}
+
+		<div class="col s12 m6 xl4">
+      <div class="card">
+        <div class="card-image">
+					<img src="{{thumbnail.secure_url}}">
+					<div class="overlay" style="background: {{artist.artistColor}};"></div>
+          <div class="card-title">{{artist.artistName}}</div>
+        </div>
+        <div class="card-content" style="background: {{artist.artistColor}}; ">
+          <p class="truncate" style="color: white;">{{songTitle}}</p>
+        </div>
+      </div>
+    </div>
+
+		{{/ each}}
+	</div>
+</div>
+
+<p>{{sessions}}</p>

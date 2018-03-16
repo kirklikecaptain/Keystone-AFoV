@@ -1,228 +1,59 @@
-.hero-background {
-	height: 200px;
-	margin-bottom: -180px;
-}
-
-.hero {
-	padding: 0px 20px;
-}
-
-.hero-image-section {
+.hero-img-box {
 	position: relative;
-	overflow: hidden;
-	align-self: start;
 	border-radius: 3px;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
+	overflow: hidden;
+	box-shadow: 1px 1px 4px rgba(0,0,0,.1);
 }
 
-.hero-image {
+.hero-img {
 	width: 100%;
 	display: block;
-	z-index: -1;
-}
-
-.hero-band {
-	font-family: $slab;
-	font-size: 36px;
-	margin-bottom: 3px;
-}
-
-.hero-song {
-	display: block;
-	color: white;
-	font-size: 22px;
-	padding: 10px;
-	border-radius: 3px;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
-}
-
-.hero-description {
-	margin-top: 10px;
-	line-height: 1.4em;
-}
-
-.watch-button {
-	display: block;
-	padding: 15px;
-	border-radius: 100px;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	margin: 10px 0px;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
-	&:hover {
-		transform: translateY(-2px);
-	}
 }
 
 .overlay {
 	position: absolute;
-	left: -1px;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
+	left: -3px;
+	top: -3px;
+	right: -3px;
+	bottom: -3px;
 	opacity: 1;
 	mix-blend-mode: color;
 	transition: all 300ms ease;
 }
 
-.video-card:hover .overlay {
-	opacity: 0;
-	transform: scale(1.1);
-}
-
-.hero-image-section:hover .overlay {
+.hero-img-box:hover .overlay, .card-image:hover .overlay{
 	opacity: 0;
 }
 
-.recent-sessions-box {
-	padding: 20px;
-	h2 {
-		font-family: $slab;
-		padding-bottom: 20px;;
-	}
+.hero-band-name {
+	font-family: 'Roboto Slab';
+	font-size: 35px;
+	margin: 5px 0px;
 }
 
-.recent-sessions {
-	display: grid;
-	grid-row-gap: 20px;
+.hero-song-title {
+	font-size: 25px;
+	margin: 0px;
 }
 
-.video-card {
-	display: block;
-	overflow: hidden;
-	border-radius: 3px;
-	text-decoration: none;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
-}
+@media (min-width: 993px) {
 
-.card-image-section {
-	position: relative;
-	overflow: hidden;
-	padding: 20px;
-}
-
-.card-image {
-	width: 100%;
-	display: block;
-	z-index: -1;
-}
-
-.card-info {
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-column-gap: 15px;
-	padding: 20px;
-	height: 100%;
-}
-
-.card-band-photo {
-	width: 60px;
-	border-radius: 50%;
-}
-
-.band-name {
-	font-family: $slab;
-	color: white;
-	font-size: 24px;
-}
-.song-name {
-	color: rgba(0, 0, 0, 0.5);
-	font-size: 18px;
-}
-
-
-
-
-@media (min-width:900px) and (max-width:1399px) {
-	.hero-description {
+	.hero-band-name {
 		color: white;
-		max-height: 7em;
-		overflow: hidden;
-		text-overflow: clip;
-	}
-}
-
-@media (min-width: 900px) {
-
-	.hero .limiter {
-		height: 100%;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-column-gap: 20px;
+		position: relative;
+		font-size: 65px;
+		margin: 0px;
 	}
 
-	.hero-background {
-		height: 310px;
-		margin-bottom: -290px;
-	}
-
-	.hero-band {
+	.hero-song-title {
 		color: white;
-		font-size: 50px;
-	}
-
-	.hero-song {
-		display: inline-block;
-		padding: 15px;
-		font-size: 30px;
-	}
-
-	.hero-description {
-		color: white;
-	}
-
-	.watch-button {
-		display: inline-block;
-		padding: 15px 25px;
-	}
-
-	.recent-sessions {
-		grid-template-columns: 1fr 1fr;
-		grid-column-gap: 20px;
-	}
-
-}
-
-@media (min-width: 1200px) {
-	.recent-sessions {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-}
-
-@media (min-width: 1420px) {
-	.hero-background {
-		height: 200px;
-		margin-bottom: -180px;
-	}
-
-	.hero-text {
-		padding-top: 30px;
-		margin-left: -100px;
-		z-index: 20;
-	}
-
-	.hero-band {
-		font-size: 80px;
-		margin-bottom: 5px;
-	}
-
-	.hero-song {
-		display: inline-block;
+		position: relative;
 		font-size: 40px;
+		margin: 0px 0px 40px 0px;
 	}
 
-	.hero-description {
-		color: #333;
-	}
-
-	.hero-description, .watch-button {
-		margin-top: 20px;
-		margin-left: 100px;
-	}
-
-	.recent-sessions-box {
-		padding: 0px 0px 20px 0px;
+	.hero-offset {
+		text-shadow: 1px 1px 4px rgba(0,0,0,.2);
 	}
 
 }

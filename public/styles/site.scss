@@ -1,21 +1,50 @@
-// @import "bootstrap/bootstrap";
-
 //modules
 
-@import "site/modules/variables";
-@import "site/modules/elements";
-@import "site/modules/grid";
-@import "site/modules/header";
-@import "site/modules/footer";
+@charset "UTF-8";
 
-//views
+// Colors
+@import "site/components/color";
 
+// Variables;
+@import "site/components/variables";
+
+// Reset
+@import "site/components/normalize";
+
+// materialize components
+@import "site/components/global";
+@import "site/components/badges";
+@import "site/components/icons-material-design";
+@import "site/components/grid";
+@import "site/components/navbar";
+@import "site/components/roboto";
+@import "site/components/typography";
+@import "site/components/transitions";
+@import "site/components/cards";
+@import "site/components/toast";
+@import "site/components/tabs";
+@import "site/components/tooltip";
+@import "site/components/buttons";
+@import "site/components/dropdown";
+@import "site/components/waves";
+@import "site/components/modal";
+@import "site/components/collapsible";
+@import "site/components/chips";
+@import "site/components/materialbox";
+@import "site/components/forms/forms";
+@import "site/components/table_of_contents";
+@import "site/components/sideNav";
+@import "site/components/preloader";
+@import "site/components/slider";
+@import "site/components/carousel";
+@import "site/components/tapTarget";
+@import "site/components/pulse";
+@import "site/components/date_picker/default";
+@import "site/components/date_picker/default.date";
+@import "site/components/date_picker/default.time";
+
+//custom overrides
+@import "site/views/default";
 @import "site/views/index";
-@import "site/views/about";
-@import "site/views/session";
-@import "site/views/sessions";
 @import "site/views/artist";
-@import "site/views/artists";
-@import "site/views/blog";
-@import "site/views/post";
 @import "site/views/contact";

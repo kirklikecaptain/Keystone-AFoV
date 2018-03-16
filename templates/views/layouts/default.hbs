@@ -7,6 +7,7 @@
 		<title>AFoV</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link href="/styles/site.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
 			- only renders when user is logged in and admin--}}
@@ -14,30 +15,32 @@
 
 	</head>
 	<body>
-		<header class="header">
-			<div class="nav limiter">
-				<a href="/" class="header-logo"><img src="/images/afov-logo.svg"></a>
-
-				<input type="checkbox" id="navBtn" name="navBtn"/>
-
-				<div class="header-links">
-					{{# each navLinks}}
-						<a href="{{ href }}" class="header-link {{#ifeq ../section key}}active{{else}}{{/ifeq}}">{{ label }}</a>
-					{{/each}}
+		<nav>
+			<div class="nav-wrapper">
+				<div class="container">
+					<a class="" href="/">
+						<img class="nav-afov-logo" src="/images/afov-logo.svg">
+					</a>
+					<a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+					<ul class="right hide-on-med-and-down">
+						{{# each navLinks}}
+							<li class="{{#ifeq ../section key}}active{{else}}{{/ifeq}}"><a href="{{ href }}">{{ label }}</a></li>
+						{{/ each}}
+					</ul>
+					<ul class="side-nav" id="mobile-demo">
+						<div class="side-nav-header"></div>
+						{{# each navLinks}}
+							<li>
+								<a href="{{ href }}" class="{{#ifeq ../section key}}active{{else}}{{/ifeq}}">
+									<i class="material-icons blue-grey-text text-lighten-2">{{ icon }}</i>
+									{{ label }}
+								</a>
+							</li>
+						{{/ each}}
+					</ul>
 				</div>
-
-				<div class="button-row">
-					<label class="nav-button" for="navBtn">
-						<div class="button-box">
-							<span class="bar"></span>
-							<span class="bar mid"></span>
-							<span class="bar"></span>
-						</div>
-					</label>
-				</div>
-
 			</div>
-		</header>
+		</nav>
 
 		<div id="body">
 			<!--
@@ -45,7 +48,7 @@
 				validation errors, success messages, etc
 			-->
 			{{#if messages}}
-			<div id="flash-messages" class="limiter">
+			<div id="flash-messages" class="container">
 				{{#if messages.info}}
 				<div class="alert alert-info">
 						{{{flashMessages messages.info}}}
@@ -74,47 +77,38 @@
 
 		</div>
 
-		<footer class="footer">
-			<div class="footer-grid limiter">
-		    <div class="footer-column">
-		      <h3 class="footer-header">Reach AFoV</h3>
-		      <a href="#" class="footer-link">About</a>
-		      <a href="/contact" class="footer-link">Contact</a>
-		      <a href="/blog" class="footer-link">Blog</a>
-					{{#if user}}
-						<a class="footer-link" href="/keystone/signout">Sign Out</a></li>
-					{{else}}
-						<a class="footer-link" href="/keystone/signin">Sign In</a></li>
-					{{/if}}
-		    </div>
-		    <div class="footer-column">
-		      <h3 class="footer-header">Follow AFoV</h3>
-		      <a href="#" class="footer-link">Youtube</a>
-		      <a href="#" class="footer-link">Instagram</a>
-		      <a href="#" class="footer-link">Facebook</a>
-		      <a href="#" class="footer-link">Reddit</a>
-		    </div>
-		    <div class="footer-column">
-		      <h3 class="footer-header">Support AFoV</h3>
-		      <a href="#" class="footer-link">Patreon</a>
-				 	<a href="#" class="footer-link">Bitcoin</a>
-		      <a href="#" class="footer-link">Ethereum</a>
-		      <a href="#" class="footer-link">Litecoin</a>
-		    </div>
-		  </div>
+		<footer class="section blue-grey darken-3">
+			<div class="container">
+				<div class="row">
+					<ul class="col s12 m4">
+						<p class="footer-header">Info</p>
+						<li><a class="white-text" href="#">Contact</a></li>
+						<li><a class="white-text" href="#">Blog</a></li>
+						<li><a class="white-text" href="#">About</a></li>
+					</ul>
+					<ul class="col s12 m4">
+						<p class="footer-header">Follow</p>
+						<li><a class="white-text" href="#">YouTube</a></li>
+						<li><a class="white-text" href="#">Reddit</a></li>
+						<li><a class="white-text" href="#">Instagram</a></li>
+						<li><a class="white-text" href="#">Facebook</a></li>
+						<li><a class="white-text" href="#">Twitter</a></li>
+					</ul>
+					<ul class="col s12 m4">
+						<p class="footer-header">Support</p>
+						<li><a class="white-text" href="#">Patreon</a></li>
+						<li><a class="white-text" href="#">Litecoin</a></li>
+						<li><a class="white-text" href="#">Ethereum</a></li>
+						<li><a class="white-text" href="#">Bitcoin</a></li>
+					</ul>
+				</div>
+			</div>
 		</footer>
 
-		{{!--
-			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
-			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
-			//- you can upgrade to 2.1.4 (also bundled) for better performance.
-		--}}
-		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
-		{{!--
-			//- Customise which Bootstrap javascript files are served by including
-			//- them specifically here, instead of bootstrap-3.3.5.min.js
-		--}}
-		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+		<script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/js/materialize.min.js"></script>
+		<script type="text/javascript" src="/js/main.js"></script>
+
 		{{{isAdminEditorJS user}}}
 	</body>
 </html>

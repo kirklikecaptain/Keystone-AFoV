@@ -21,6 +21,7 @@ exports = module.exports = function (req, res) {
 			locals.data.session = result;
 			next();
 		});
+
 	});
 
 	view.render('session');

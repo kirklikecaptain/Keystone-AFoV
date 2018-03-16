@@ -6,7 +6,7 @@ exports = module.exports = function (req, res) {
 
 	locals.section = 'sessions';
 
-	// view.query('artists', keystone.list('Artist').model.find());
+	view.query('sessions', keystone.list('Session').model.find().populate('artist').sort('-uploadDate'));
 
 	view.render('sessions');
 };

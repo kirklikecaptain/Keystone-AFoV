@@ -1,3 +1,16 @@
-artist
-<p>{{data.artist}}artist data</p>
-<h3>{{artistSessions}}</h3>
+<div class="container section row">
+		<div class="col s12 m4">
+			<img class="card"src="{{data.artist.artistPicture.secure_url}}" alt="">
+		</div>
+		<div class="col s12 m8">
+			<p class="artist-heading">{{data.artist.artistName}}</p>
+			{{{data.artist.artistBio}}}
+		</div>
+
+</div>
+
+{{# each data.sessions}}
+<p>Song Title: {{songTitle}}</p>
+{{/each}}
+
+<p>{{data.sessions}}</p>
