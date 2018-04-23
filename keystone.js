@@ -2,7 +2,6 @@
 // customising the .env file in your project's root folder.
 require('dotenv').config();
 
-// Require keystone
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
 
@@ -20,7 +19,7 @@ keystone.init({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
 		defaultLayout: 'default',
-		helpers: new require('./templates/views/helpers')(),
+		helpers: require('./templates/views/helpers')(),
 		extname: '.hbs',
 	}).engine,
 

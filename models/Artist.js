@@ -15,7 +15,6 @@ Artist.add({
 	artistBio: { type: Types.Html, wysiwyg: true, height: 300 },
 });
 
-//revisit this
 Artist.relationship({ ref: 'Session', refPath: 'artist' });
 Artist.defaultColumns = 'artistName|25%, artistColor|15%, artistPicture|15%, artistBio|35%';
 Artist.register();

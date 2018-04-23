@@ -8,6 +8,7 @@
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link href="/styles/site.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:700" rel="stylesheet">
 
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
 			- only renders when user is logged in and admin--}}
@@ -15,30 +16,16 @@
 
 	</head>
 	<body>
-		<nav>
-			<div class="nav-wrapper">
-				<div class="container">
-					<a class="" href="/">
-						<img class="nav-afov-logo" src="/images/afov-logo.svg">
-					</a>
-					<a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
-					<ul class="right hide-on-med-and-down">
-						{{# each navLinks}}
-							<li class="{{#ifeq ../section key}}active{{else}}{{/ifeq}}"><a href="{{ href }}">{{ label }}</a></li>
-						{{/ each}}
-					</ul>
-					<ul class="side-nav" id="mobile-demo">
-						<div class="side-nav-header"></div>
-						{{# each navLinks}}
-							<li>
-								<a href="{{ href }}" class="{{#ifeq ../section key}}active{{else}}{{/ifeq}}">
-									<i class="material-icons blue-grey-text text-lighten-2">{{ icon }}</i>
-									{{ label }}
-								</a>
-							</li>
-						{{/ each}}
-					</ul>
-				</div>
+		<nav class="nav-bar">
+			<div class="container">
+				<a class="nav-logo-link" href="/">
+					<img class="nav-logo-img" src="/images/afov-logo.svg">
+				</a>
+				<ul class="nav-links">
+					{{# each navLinks}}
+						<li><a class="nav-link {{#ifeq ../section key}}active{{else}}{{/ifeq}}" href="{{ href }}">{{ label }}</a></li>
+					{{/ each}}
+				</ul>
 			</div>
 		</nav>
 
@@ -106,7 +93,6 @@
 		</footer>
 
 		<script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="/js/materialize.min.js"></script>
 		<script type="text/javascript" src="/js/main.js"></script>
 
 		{{{isAdminEditorJS user}}}

@@ -1,3 +1,57 @@
+<style>
+	nav {
+		background: {{data.session.artist.artistColor}};
+	}
+</style>
+<div style="background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ) {{data.session.artist.artistColor}}; height: 200px; margin-bottom: -180px;">
+</div>
+
 <div class="container">
-	<h1>Session Video</h1>
+	<div class="row">
+		<div class="col s12 l8">
+			<div class="video-container">
+				<iframe id="ytplayer" type="text/html" width="560" height="349" src="https://www.youtube.com/embed/{{data.session.youtubeVideoID}}?autoplay=0&modestbranding=1&color=white" frameborder="0" style="margin-bottom: -4px;" allowfullscreen></iframe>
+			</div>
+			<div class="section">
+				<h3 class="artist-name-header">{{data.session.artist.artistName}}</h3>
+				<h4>{{data.session.songTitle}}</h4>
+				<p>{{data.session.shortDescription}}</p>
+				<h6>Artist Bio</h6>
+				{{{data.session.artist.artistBio}}}
+				<div class="section">
+					<script src="https://apis.google.com/js/platform.js"></script>
+					<div class="g-ytsubscribe" data-channel="afistfulofvinyl" data-layout="full" data-count="default"></div>
+
+				</div>
+				<h6>Contributors</h6>
+				<div class="">
+					{{#each data.session.contributors}}
+						<div class="chip">
+						 <img src="{{mugshot.secure_url}}" alt="Oops">
+						 {{name}}
+						</div>
+
+					{{/each}}
+				</div>
+			</div>
+		</div>
+
+		<div class="col s12 l4">
+			<h5 class="rel-sessions" style="background: {{data.session.artist.artistColor}};">More by {{data.session.artist.artistName}}</h5>
+			{{#each data.related}}
+				<a href="{{sessionUrl slug}}" class="col s12 block">
+					<div class="card">
+						<div class="card-image">
+							<img src="{{thumbnail.secure_url}}">
+							<div class="overlay" style="background: {{artist.artistColor}};"></div>
+						</div>
+						<div class="card-content" style="background: {{artist.artistColor}}; ">
+							<p class="truncate" style="color: white;">{{songTitle}}</p>
+						</div>
+					</div>
+				</a>
+			{{/each}}
+
+		</div>
+	</div>
 </div>

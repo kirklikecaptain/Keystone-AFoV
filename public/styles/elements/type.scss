@@ -1,0 +1,32 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 20px 0px 10px 0px;
+	font-family: $slab, serif;
+	font-weight: 700;
+	&.sans {
+		font-family: $sans;
+	}
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 35px;
+}
+
+h3 {
+	font-size: 25px;
+}

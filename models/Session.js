@@ -6,6 +6,7 @@ var Session = new keystone.List('Session', {
 	singular: 'Session',
 	plural: 'Sessions',
 	autokey: { path: 'slug', from: 'songTitle', unique: true },
+	defaultSort: '-uploadDate',
 });
 
 Session.add({

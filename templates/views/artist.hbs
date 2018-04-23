@@ -1,16 +1,40 @@
-<div class="container section row">
-		<div class="col s12 m4">
-			<img class="card"src="{{data.artist.artistPicture.secure_url}}" alt="">
+<style>
+	nav {
+		background: {{data.artist.artistColor}};
+	}
+</style>
+
+<div style="background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ) {{data.artist.artistColor}}; height: 200px; margin-bottom: -180px;">
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col s12 m3">
+			<img class="responsive-img artist-pic" src="{{data.artist.artistPicture.secure_url}}" alt="">
 		</div>
-		<div class="col s12 m8">
-			<p class="artist-heading">{{data.artist.artistName}}</p>
-			{{{data.artist.artistBio}}}
+		<div class="col s12 m9">
+			<div class="artist-info">
+				<p class="artist-heading">{{data.artist.artistName}}</p>
+				{{{data.artist.artistBio}}}
+			</div>
 		</div>
+	</div>
 
 </div>
 
-{{# each data.sessions}}
-<p>Song Title: {{songTitle}}</p>
-{{/each}}
-
-<p>{{data.sessions}}</p>
+<div class="container">
+	<div class="row">
+		{{# each data.sessions}}
+			<a href="{{sessionUrl slug}}" class="col s12 m6 xl4 block">
+				<div class="card">
+					<div class="card-image">
+						<img src="{{thumbnail.secure_url}}">
+						<div class="overlay" style="background: {{artist.artistColor}};"></div>
+					</div>
+					<div class="card-content" style="background: {{artist.artistColor}}; ">
+						<p class="truncate" style="color: white;">{{songTitle}}</p>
+					</div>
+				</div>
+			</a>
+		{{/each}}
+	</div>
+</div>

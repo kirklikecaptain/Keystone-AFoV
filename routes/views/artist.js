@@ -22,7 +22,7 @@ exports = module.exports = function (req, res) {
 
     try {
 			var result = await q.exec();
-			var session = await keystone.list('Session').model.find({ artist: result._id}).exec();
+			var session = await keystone.list('Session').model.find({ artist: result._id}).populate('artist').exec();
 			locals.data.artist = result;
 			locals.data.sessions = session;
 			next();
