@@ -1,52 +1,40 @@
 {{# each hero}}
-<style>
-	nav {
-		background: {{artist.artistColor}};
-	}
-</style>
+	<style>
+		.nav-bar {
+			background: {{artist.artistColor}};
+		}
+	</style>
 
-<div style="background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ) {{artist.artistColor}}; padding: 30px 0px;">
-	<div class="container">
-		<div class="row">
-			<div class="">
-				<div class="hero-img-box">
-					<img class="hero-img" src="{{thumbnail.secure_url}}" alt="{{songTitle}}">
-					<div class="overlay" style="background: {{artist.artistColor}};"></div>
-				</div>
+	<div class="hero" style="background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ) {{artist.artistColor}};">
+		<div class="container">
+			<div class="hero-img-box">
+				<img class="hero-img" src="{{thumbnail.secure_url}}" alt="{{songTitle}}">
+				<div class="overlay" style="background: {{artist.artistColor}};"></div>
 			</div>
-			<div class="col l6">
-				<p class="hero-band-name">{{artist.artistName}}</p>
-				<p class="hero-song-title"><i>{{songTitle}}</i></p>
+			<div class="hero-info">
+				<h1 class="hero-band-name">{{artist.artistName}}</h1>
+				<h2 class="hero-song-name sans">{{songTitle}}</h2>
 				<p class="hero-song-description">{{shortDescription}}</p>
-				<a class="waves-effect waves-light btn" style="background-color: {{artist.artistColor}};" href="{{sessionUrl slug}}"><i class="material-icons left">play_circle_outline</i>Watch</a>
+				<a class="watch-button" style="background-color: {{artist.artistColor}};" href="{{sessionUrl slug}}"><i class="material-icons">music_video</i> Watch</a>
 			</div>
 		</div>
 	</div>
-
-</div>
 
 
 {{/ each}}
 
 <div class="container">
-	<h5>Recent Sessions</h5>
-	<div class="row">
+	<h3>Recent Sessions</h3>
+	<div class="recent-videos">
 		{{# each recent}}
-
-		<a href="{{sessionUrl slug}}" class="col s12 m6 xl4 block">
-      <div class="card">
-        <div class="card-image">
-					<img src="{{thumbnail.secure_url}}">
+			<a href="{{sessionUrl slug}}" class="video-card">
+				<div class="card-img-box">
+					<img class="video-img" src="{{thumbnail.secure_url}}">
 					<div class="overlay" style="background: {{artist.artistColor}};"></div>
-
-          <div class="card-title">{{artist.artistName}}</div>
-        </div>
-        <div class="card-content" style="background: {{artist.artistColor}}; ">
-          <p class="truncate" style="color: white;">{{songTitle}}</p>
-        </div>
-      </div>
-    </a>
-
+					<h3 class="card-artist-name">{{artist.artistName}}</h3>
+				</div>
+				<p class="card-song-title" style="color: white; background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ) {{artist.artistColor}};">{{songTitle}}</p>
+			</a>
 		{{/ each}}
 	</div>
 </div>

@@ -5,7 +5,8 @@
 
 .container {
   max-width: 1400px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 20px; }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -19,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 20px 0px 10px 0px;
+  margin: 15px 0px 10px 0px;
   font-family: "Roboto Slab", serif;
   font-weight: 700; }
   h1.sans,
@@ -39,31 +40,210 @@ h2 {
 h3 {
   font-size: 25px; }
 
+p _ {
+  margin: 15px 0px; }
+
 .nav-bar {
-  background: #2B3138; }
-  .nav-bar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
+  background: #1A1D21;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  z-index: 10; }
 
 .nav-logo-link {
   display: block; }
 
 .nav-logo-img {
   display: block;
-  width: 100px; }
-
-.nav-links {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  display: flex; }
+  width: 120px;
+  padding: 20px 0px 30px 0px;
+  margin: 0 auto; }
 
 .nav-link {
   display: block;
-  padding: 30px;
+  padding: 15px 0px;
   color: #ffffff;
+  text-decoration: none;
+  border-top: solid 1px #ffffff; }
+  .nav-link:first-of-type {
+    border-top: none; }
+
+.nav-button-box {
+  display: flex;
+  justify-content: flex-end; }
+
+.nav-button {
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+
+.full-bar,
+.mid-bar {
+  background: #ffffff;
+  height: 2px; }
+
+.full-bar {
+  width: 100%; }
+
+.mid-bar {
+  margin: 5px 0px;
+  width: 60%; }
+
+@media (min-width: 600px) {
+  .nav-bar {
+    height: 100px; }
+    .nav-bar .container {
+      padding: 0px 20px;
+      display: flex;
+      height: 100%;
+      justify-content: space-between; }
+  .nav-button-box {
+    display: none; }
+  .nav-logo-img {
+    padding: 0px;
+    margin: 0px;
+    height: 100%; }
+  .nav-links {
+    display: flex; }
+  .nav-link {
+    border: none;
+    padding: 0px 20px;
+    align-self: center; } }
+
+.footer {
+  background: #2B3138; }
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.footer-header {
+  color: #edf4fc;
+  align-self: stretch;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: solid 2px #edf4fc; }
+
+.footer-link {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  padding-bottom: 10px; }
+
+.footer-link:hover {
+  text-decoration: underline; }
+
+@media (min-width: 600px) {
+  .footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px; } }
+
+.hero-img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px; }
+
+.hero-img {
+  display: block;
+  width: 100%; }
+
+.watch-button {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2); }
+  .watch-button i {
+    display: inline-block;
+    vertical-align: bottom; }
+
+.hero-info {
+  padding: 20px 0px 0px 0px; }
+
+.hero-band-name,
+.hero-song-name,
+.hero-song-description {
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  color: white;
+  line-height: 1.2;
+  margin: 0px;
+  padding-bottom: 10px; }
+
+.hero-song-description {
+  line-height: 1.5; }
+
+.recent-videos {
+  display: grid;
+  grid-row-gap: 20px; }
+
+.video-card {
+  border-radius: 2px;
+  overflow: hidden;
+  display: block;
   text-decoration: none; }
+
+.card-img-box {
+  position: relative; }
+
+.overlay {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  mix-blend-mode: color;
+  opacity: .8;
+  transition: .2s ease opacity; }
+  .overlay:hover {
+    opacity: 0; }
+
+.video-img {
+  display: block;
+  z-index: -1;
+  width: 100%; }
+
+.card-artist-name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+  margin: 0;
+  padding: 15px; }
+
+.card-song-title {
+  font-size: 18px;
+  margin: 0px;
+  padding: 15px;
+  background: white; }
+
+@media (min-width: 600px) {
+  .recent-videos {
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr; } }
+
+@media (min-width: 1000px) {
+  .hero .container {
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px; }
+  .hero-img-box {
+    align-self: start; }
+  .hero-info {
+    padding-top: 20px; }
+  .hero-song-description {
+    font-size: 20px;
+    padding-right: 50px; }
+  .watch-button {
+    display: inline-block;
+    font-size: 20px;
+    padding: 15px 70px; }
+  .recent-videos {
+    grid-template-columns: 1fr 1fr 1fr; } }
 
 .swatches {
   display: grid;

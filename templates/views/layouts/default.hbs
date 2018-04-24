@@ -21,11 +21,18 @@
 				<a class="nav-logo-link" href="/">
 					<img class="nav-logo-img" src="/images/afov-logo.svg">
 				</a>
-				<ul class="nav-links">
+				<div class="nav-links">
 					{{# each navLinks}}
-						<li><a class="nav-link {{#ifeq ../section key}}active{{else}}{{/ifeq}}" href="{{ href }}">{{ label }}</a></li>
+						<a class="nav-link {{#ifeq ../section key}}active{{else}}{{/ifeq}}" href="{{ href }}">{{ label }}</a>
 					{{/ each}}
-				</ul>
+					<div class="nav-button-box">
+						<div class="nav-button">
+							<div class="full-bar"></div>
+							<div class="mid-bar"></div>
+							<div class="full-bar"></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</nav>
 
@@ -64,30 +71,28 @@
 
 		</div>
 
-		<footer class="section blue-grey darken-3">
+		<footer class="footer">
 			<div class="container">
-				<div class="row">
-					<ul class="col s12 m4">
-						<p class="footer-header">Info</p>
-						<li><a class="white-text" href="#">Contact</a></li>
-						<li><a class="white-text" href="#">Blog</a></li>
-						<li><a class="white-text" href="#">About</a></li>
-					</ul>
-					<ul class="col s12 m4">
-						<p class="footer-header">Follow</p>
-						<li><a class="white-text" href="#">YouTube</a></li>
-						<li><a class="white-text" href="#">Reddit</a></li>
-						<li><a class="white-text" href="#">Instagram</a></li>
-						<li><a class="white-text" href="#">Facebook</a></li>
-						<li><a class="white-text" href="#">Twitter</a></li>
-					</ul>
-					<ul class="col s12 m4">
-						<p class="footer-header">Support</p>
-						<li><a class="white-text" href="#">Patreon</a></li>
-						<li><a class="white-text" href="#">Litecoin</a></li>
-						<li><a class="white-text" href="#">Ethereum</a></li>
-						<li><a class="white-text" href="#">Bitcoin</a></li>
-					</ul>
+				<div class="footer-links">
+					<h3 class="footer-header">Info</h3>
+					<a class="footer-link" href="#">Contact</a>
+					<a class="footer-link" href="#">Blog</a>
+					<a class="footer-link" href="#">About</a>
+				</div>
+				<div class="footer-links">
+					<h3 class="footer-header">Follow</h3>
+					<a class="footer-link" href="#">YouTube</a>
+					<a class="footer-link" href="#">Reddit</a>
+					<a class="footer-link" href="#">Instagram</a>
+					<a class="footer-link" href="#">Facebook</a>
+					<a class="footer-link" href="#">Twitter</a>
+				</div>
+				<div class="footer-links">
+					<h3 class="footer-header">Support</h3>
+					<a class="footer-link" href="#">Patreon</a>
+					<a class="footer-link" href="#">Litecoin</a>
+					<a class="footer-link" href="#">Ethereum</a>
+					<a class="footer-link" href="#">Bitcoin</a>
 				</div>
 			</div>
 		</footer>

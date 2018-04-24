@@ -11,7 +11,7 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 20px 0px 10px 0px;
+	margin: 15px 0px 10px 0px;
 	font-family: $slab, serif;
 	font-weight: 700;
 	&.sans {
@@ -29,4 +29,8 @@ h2 {
 
 h3 {
 	font-size: 25px;
+}
+
+p _{
+	margin: 15px 0px;
 }

@@ -1,1 +1,141 @@
+.hero-img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.hero-img {
+  display: block;
+  width: 100%;
+}
+
+.watch-button {
+	display: block;
+  text-align: center;
+	padding: 15px;
+	border-radius: 5px;
+	color: white;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  i {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+}
+
+.hero-info {
+  padding: 20px 0px 0px 0px;
+}
+
+.hero-band-name,
+.hero-song-name,
+.hero-song-description {
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  color: white;
+  line-height: 1.2;
+  margin: 0px;
+  padding-bottom: 10px;
+}
+
+.hero-song-description {
+  line-height: 1.5;
+}
+
+.recent-videos {
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.video-card {
+  border-radius: 2px;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+}
+
+.card-img-box {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  mix-blend-mode: color;
+  opacity: .8;
+  transition: .2s ease opacity;
+  &:hover {
+    opacity: 0;
+  }
+}
+
+.video-img {
+  display: block;
+  z-index: -1;
+  width: 100%;
+}
+
+.card-artist-name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+  margin: 0;
+  padding: 15px;
+}
+
+.card-song-title {
+  font-size: 18px;
+  margin: 0px;
+  padding: 15px;
+  background: white;
+}
+
+@media (min-width: $mid-screen) {
+  .recent-videos {
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: $large-screen) {
+
+  .hero {
+    .container{
+      padding: 30px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+    }
+  }
+
+  .hero-img-box {
+    align-self: start;
+  }
+
+  .hero-info {
+    padding-top: 20px;
+  }
+
+  .hero-song-description {
+    font-size: 20px;
+    padding-right: 50px;
+  }
+
+  .watch-button {
+    display: inline-block;
+    font-size: 20px;
+    padding: 15px 70px;
+  }
+
+
+  .recent-videos {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
 
