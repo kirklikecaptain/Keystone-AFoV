@@ -1,0 +1,29 @@
+.artist-cards {
+	display: grid;
+	grid-row-gap: 20px;
+}
+
+.artist-card {
+	display: block;
+	color: $dark-grey;
+	text-decoration: none;
+	overflow: hidden;
+	border-radius: 2px;
+}
+
+.artist-card-img-box {
+	position: relative;
+}
+
+.artist-card-img {
+	display: block;
+	width: 100%;
+}
+
+.artist-card-name {
+	position: absolute;
+	color: white;
+	bottom: 0;
+	left: 0;
+	padding: 20px;
+}

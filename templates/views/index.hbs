@@ -5,7 +5,7 @@
 		}
 	</style>
 
-	<div class="hero" style="background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ) {{artist.artistColor}};">
+	<div class="hero" style="background: linear-gradient( rgba(0,0,0, 0.35), rgba(0, 0, 0, 0.35) ) {{artist.artistColor}};">
 		<div class="container">
 			<div class="hero-img-box">
 				<img class="hero-img" src="{{thumbnail.secure_url}}" alt="{{songTitle}}">
@@ -20,7 +20,6 @@
 		</div>
 	</div>
 
-
 {{/ each}}
 
 <div class="container">
@@ -33,7 +32,7 @@
 					<div class="overlay" style="background: {{artist.artistColor}};"></div>
 					<h3 class="card-artist-name">{{artist.artistName}}</h3>
 				</div>
-				<p class="card-song-title" style="color: white; background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ) {{artist.artistColor}};">{{songTitle}}</p>
+				<h5 class="card-song-title sans" style="background: white; color: {{artist.artistColor}};">{{songTitle}}</h5>
 			</a>
 		{{/ each}}
 	</div>

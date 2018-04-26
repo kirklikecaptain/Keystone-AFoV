@@ -44,7 +44,7 @@
 	height: 2px;
 }
 
-.full-bar{
+.full-bar {
 	width: 100%;
 }
 
@@ -54,7 +54,6 @@
 }
 
 @media (min-width: $mid-screen) {
-
 	.nav-bar {
 		height: 100px;
 		.container {
@@ -64,25 +63,21 @@
 			justify-content: space-between;
 		}
 	}
-
 	.nav-button-box {
 		display: none;
 	}
-
 	.nav-logo-img {
 		padding: 0px;
 		margin: 0px;
 		height: 100%;
 	}
-
 	.nav-links {
 		display: flex;
 	}
-
 	.nav-link {
 		border: none;
 		padding: 0px 20px;
-		align-self: center;
+		display: flex;
+		align-items: center;
 	}
-
 }

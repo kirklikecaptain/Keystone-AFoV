@@ -8,11 +8,16 @@
   margin: 0 auto;
   padding: 20px; }
 
+.no-pad-marg {
+  padding: 0px;
+  margin: 0px; }
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #333;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background: #f0f0f0; }
 
 h1,
 h2,
@@ -107,7 +112,8 @@ p _ {
   .nav-link {
     border: none;
     padding: 0px 20px;
-    align-self: center; } }
+    display: flex;
+    align-items: center; } }
 
 .footer {
   background: #2B3138; }
@@ -244,6 +250,101 @@ p _ {
     padding: 15px 70px; }
   .recent-videos {
     grid-template-columns: 1fr 1fr 1fr; } }
+
+.artist-cards {
+  display: grid;
+  grid-row-gap: 20px; }
+
+.artist-card {
+  display: block;
+  color: #2B3138;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 2px; }
+
+.artist-card-img-box {
+  position: relative; }
+
+.artist-card-img {
+  display: block;
+  width: 100%; }
+
+.artist-card-name {
+  position: absolute;
+  color: white;
+  bottom: 0;
+  left: 0;
+  padding: 20px; }
+
+.contact-card {
+  background: white;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 2px; }
+  .contact-card label {
+    font-family: 'Roboto Slab';
+    font-size: 12px;
+    color: #63707F; }
+  .contact-card input,
+  .contact-card textarea {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    width: 100%;
+    margin: 20px 0px; }
+  .contact-card input:focus,
+  .contact-card textarea:focus,
+  .contact-card button:focus {
+    outline: none;
+    border: #27CEC7 1px solid; }
+  .contact-card button {
+    padding: 20px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background: #27CEC7;
+    cursor: pointer;
+    display: block; }
+  .contact-card .submit-button-box {
+    display: flex;
+    justify-content: flex-end; }
+
+.session-card {
+  display: block;
+  text-decoration: none;
+  color: #2B3138;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  overflow: hidden; }
+
+.session-img-box {
+  position: relative;
+  overflow: hidden;
+  width: 100%; }
+
+.session-img {
+  display: block;
+  width: 100%; }
+
+.session-card-info {
+  padding: 20px; }
+  .session-card-info h1 {
+    margin: 0px; }
+  .session-card-info h3 {
+    margin: 0px; }
+
+.post-date {
+  color: #63707F;
+  font-size: 12px; }
+
+@media (min-width: 800px) {
+  .session-card {
+    display: grid;
+    grid-template-columns: auto 1fr; }
+  .session-img-box {
+    width: 400px; } }
 
 .swatches {
   display: grid;

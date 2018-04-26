@@ -14,32 +14,36 @@ exports = module.exports = function (req, res) {
 	};
 
 
-		view.on('init', async function (next) {
+	view.on('init', async function (next) {
 
-			var q = keystone.list('Session')
-				.model
-				.findOne({ slug: locals.filters.session })
-				.populate('artist')
-				.populate('contributors');
+		var q = keystone.list('Session')
+			.model
+			.findOne({
+				slug: locals.filters.session
+			})
+			.populate('artist')
+			.populate('contributors');
 
-	    try {
-				var result = await q.exec();
-				var relate = await keystone.list('Session')
+		try {
+			var result = await q.exec();
+			var relate = await keystone.list('Session')
 				.model
-				.find({ artist: result.artist})
+				.find({
+					artist: result.artist
+				})
 				.where('songTitle').ne(result.songTitle)
 				.populate('artist')
 				.exec();
 
-				locals.data.session = result;
-				locals.data.related = relate;
-				next();
+			locals.data.session = result;
+			locals.data.related = relate;
+			next();
 
-			} catch (err) {
-				console.error(err);
-			}
+		} catch (err) {
+			console.error(err);
+		}
 
-		});
+	});
 
 
 

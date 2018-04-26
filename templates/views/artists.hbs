@@ -1,17 +1,14 @@
-<div class="sub-navigation"></div>
 <div class="container">
-	<h5 class="white-text">Artists</h5>
-	<div class="row">
+	<h3>Artists</h3>
+	<div class="artist-cards">
 		{{# each artists}}
-			<div class="col s12 m4 xl3">
-			  <a href="{{artistUrl slug}}" class="card block">
-			    <div class="card-image">
-			      <img src="{{artistPicture.secure_url}}">
-						<div class="overlay" style="background: {{artistColor}}"></div>
-			      <span class="card-title truncate">{{artistName}}</span>
-			    </div>
-			  </a>
-			</div>
+			<a href="{{artistUrl slug}}" class="artist-card">
+				<div class="artist-card-img-box">
+					<img class="artist-card-img" src="{{artistPicture.secure_url}}">
+					<div class="overlay" style="background: {{artistColor}}"></div>
+					<h3 class="artist-card-name">{{artistName}}</h3>
+				</div>
+			</a>
 		{{/ each}}
 	</div>
 </div>
