@@ -26,4 +26,24 @@
 	bottom: 0;
 	left: 0;
 	padding: 20px;
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: $mid-screen) {
+	.artist-cards {
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 20px;
+	}
+}
+
+@media (min-width: $large-screen) {
+	.artist-cards {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media (min-width: $huge-screen) {
+	.artist-cards {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
 }

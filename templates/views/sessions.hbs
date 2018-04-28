@@ -1,20 +1,18 @@
 <div class="container">
 	<h3 class="white-text">Sessions</h3>
-	<div class="row">
+	<div class="session-cards">
 		{{# each sessions}}
-
-		<a href="{{sessionUrl slug}}" class="session-card">
-			<div class="session-img-box">
-				<img class="session-img" src="{{thumbnail.secure_url}}">
-				<div class="overlay" style="background: {{artist.artistColor}};"></div>
-			</div>
-			<div class="session-card-info">
-				<h1>{{artist.artistName}}</h1>
-				<h3 class="sans" style="color: {{artist.artistColor}};">{{songTitle}}</h3>
-				<p class="post-date" >Posted: {{ _.uploadDate.format "MMM D Y" }}</p>
-			</div>
-    </a>
-
+			<a href="{{sessionUrl slug}}" class="video-card shadow">
+					<div class="card-img-box">
+						<img class="video-img" src="{{thumbnail.secure_url}}">
+						<div class="overlay" style="background: {{artist.artistColor}};"></div>
+						<h3 class="card-artist-name">{{artist.artistName}}</h3>
+					</div>
+					<div class="card-info">
+						<h5 class="card-song-title sans" style=" color: {{artist.artistColor}};">{{songTitle}}</h5>
+						<p class="post-date" >{{ _.uploadDate.format "MMMM D Y" }}</p>
+					</div>
+			</a>
 		{{/ each}}
 	</div>
 </div>

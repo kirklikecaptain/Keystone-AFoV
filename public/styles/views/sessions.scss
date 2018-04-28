@@ -1,47 +1,24 @@
-.session-card {
-	display: block;
-	text-decoration: none;
-	color: $dark-grey;
-	background: white;
-	margin-bottom: 20px;
-	border-radius: 2px;
-	overflow: hidden;
+.session-cards {
+	display: grid;
+	grid-row-gap: 20px;
 }
 
-.session-img-box {
-	position: relative;
-	overflow: hidden;
-	width: 100%;
-}
-
-.session-img {
-	display: block;
-	width: 100%;
-}
-
-.session-card-info {
-	padding: 20px;
-	h1 {
-		margin: 0px;
+@media (min-width: $mid-screen) {
+	.session-cards {
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 20px;
 	}
-	h3 {
-		margin: 0px;
-	}
-}
-
-.post-date {
-	color: $mid-grey;
-	font-size: 12px;
-}
-
-@media (min-width: 800px) {
 	.session-card {
 		display: grid;
-		grid-template-columns: auto 1fr;
-	}
-	.session-img-box {
-		width: 400px;
 	}
 }
 
+@media (min-width: $large-screen) {
+	.session-cards {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.session-card {
+		display: grid;
+	}
+}
 

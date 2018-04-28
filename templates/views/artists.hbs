@@ -2,11 +2,11 @@
 	<h3>Artists</h3>
 	<div class="artist-cards">
 		{{# each artists}}
-			<a href="{{artistUrl slug}}" class="artist-card">
+			<a href="{{artistUrl slug}}" class="artist-card shadow">
 				<div class="artist-card-img-box">
 					<img class="artist-card-img" src="{{artistPicture.secure_url}}">
 					<div class="overlay" style="background: {{artistColor}}"></div>
-					<h3 class="artist-card-name">{{artistName}}</h3>
+					<h2 class="artist-card-name">{{artistName}}</h2>
 				</div>
 			</a>
 		{{/ each}}

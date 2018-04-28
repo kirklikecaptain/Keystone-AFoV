@@ -1,57 +1,60 @@
 <style>
-	nav {
+	.nav-bar {
 		background: {{data.session.artist.artistColor}};
 	}
 </style>
-<div style="background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ) {{data.session.artist.artistColor}}; height: 200px; margin-bottom: -180px;">
+<div class="offset-header" style="background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ) {{data.session.artist.artistColor}};">
 </div>
-
-<div class="container">
-	<div class="row">
-		<div class="col s12 l8">
-			<div class="video-container">
-				<iframe id="ytplayer" type="text/html" width="560" height="349" src="https://www.youtube.com/embed/{{data.session.youtubeVideoID}}?autoplay=0&modestbranding=1&color=white" frameborder="0" style="margin-bottom: -4px;" allowfullscreen></iframe>
+<div class="container video-info">
+	<div class="session-video-card shadow">
+		<div class="video-container" style="background: {{data.session.artist.artistColor}}">
+			<i class="material-icons">play_circle_filled</i>
+			<iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/{{data.session.youtubeVideoID}}?autoplay=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="video-details">
+			<h1 class="artist-name-header">{{data.session.artist.artistName}}</h1>
+			<h2 class="sans" style="color: {{data.session.artist.artistColor}}">{{data.session.songTitle}}</h2>
+			<p class="session-post-date" >Added: {{ data.session._.uploadDate.format "MMMM D Y" }}</p>
+			<p>{{data.session.shortDescription}}</p>
+			<h3>Artist Info</h3>
+			{{{data.session.artist.artistBio}}}
+			<div class="spacer"></div>
+			<h3>Session Contributors</h3>
+			<div class="contributors">
+				{{#each data.session.contributors}}
+					<div class="chip">
+						<img src="{{mugshot.secure_url}}" alt="Oops">
+						{{name}}
+					</div>
+				{{/each}}
 			</div>
-			<div class="section">
-				<h3 class="artist-name-header">{{data.session.artist.artistName}}</h3>
-				<h4>{{data.session.songTitle}}</h4>
-				<p>{{data.session.shortDescription}}</p>
-				<h6>Artist Bio</h6>
-				{{{data.session.artist.artistBio}}}
-				<div class="section">
-					<script src="https://apis.google.com/js/platform.js"></script>
-					<div class="g-ytsubscribe" data-channel="afistfulofvinyl" data-layout="full" data-count="default"></div>
-
-				</div>
-				<h6>Contributors</h6>
-				<div class="">
-					{{#each data.session.contributors}}
-						<div class="chip">
-						 <img src="{{mugshot.secure_url}}" alt="Oops">
-						 {{name}}
-						</div>
-
-					{{/each}}
-				</div>
+			<div class="spacer"></div>
+			<div class="subscribe">
+				<script src="https://apis.google.com/js/platform.js"></script>
+				<div class="g-ytsubscribe" data-channel="afistfulofvinyl" data-layout="full" data-count="default"></div>
 			</div>
 		</div>
+	</div>
 
-		<div class="col s12 l4">
-			<h5 class="rel-sessions" style="background: {{data.session.artist.artistColor}};">More by {{data.session.artist.artistName}}</h5>
+	{{#if data.related}}
+	<div class="related-videos">
+		<h3 class="rel-sessions">More by {{data.session.artist.artistName}}</h3>
+		<div class="related-items">
 			{{#each data.related}}
-				<a href="{{sessionUrl slug}}" class="col s12 block">
-					<div class="card">
-						<div class="card-image">
-							<img src="{{thumbnail.secure_url}}">
-							<div class="overlay" style="background: {{artist.artistColor}};"></div>
-						</div>
-						<div class="card-content" style="background: {{artist.artistColor}}; ">
-							<p class="truncate" style="color: white;">{{songTitle}}</p>
-						</div>
+				<a href="{{sessionUrl slug}}" class="video-card shadow">
+					<div class="card-img-box">
+						<img class="video-img" src="{{thumbnail.secure_url}}">
+						<div class="overlay" style="background: {{artist.artistColor}};"></div>
+					</div>
+					<div class="card-info">
+						<h5 class="card-song-title sans" style=" color: {{artist.artistColor}};">{{songTitle}}</h5>
+						<p class="post-date" >{{ _.uploadDate.format "MMMM D Y" }}</p>
 					</div>
 				</a>
 			{{/each}}
-
 		</div>
 	</div>
+	{{else}}
+	<div></div>
+	{{/if}}
 </div>

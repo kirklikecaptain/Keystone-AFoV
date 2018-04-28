@@ -1,11 +1,22 @@
-<div class="container">
+<div class="container vertical-filler">
 		{{#if enquirySubmitted}}
-		<h1>Thanks for reaching out!</h1>
+		<div class="contact-card shadow">
+			<div class="contact-header">
+				<h2>Thanks for reaching out!</h2>
+			</div>
+			<div class="contact-card-details">
+				<p class="center-text">We'll get back to you asap.</p>
+				<p class="center-text">💜</p>
+				<p class="center-text">- AFoV</p>
+			</div>
+		</div>
 		{{else}}
 		<div class="contact-card shadow">
-			<h2>Contact A Fistful of Vinyl</h2>
+			<div class="contact-header">
+				<div class="contact-overlay overlay"></div>
+				<h2>Contact A Fistful of Vinyl</h2>
+			</div>
 			<form method="post" class="contact-card-details">
-				<img src="" alt="">
 				<input type="hidden" name="action" value="contact">
 				<div class="input-field">
 					<label>Name</label>
@@ -21,10 +32,10 @@
 				</div>
 				<div class="input-field">
 					<label for="textarea1">Message</label>
-					<textarea id="textarea1" name="message" placeholder="Send us a compliment, complaint, or ask us something..." >{{formData.message}}</textarea>
+					<textarea id="textarea1" name="message" rows="5" placeholder="Send us a compliment, complaint, or ask us something..." >{{formData.message}}</textarea>
 				</div>
 				<div class="submit-button-box">
-					<button type="submit">Send Message</button>
+					<button class="shadow" type="submit">Send Message</button>
 				</div>
 			</form>
 		</div>

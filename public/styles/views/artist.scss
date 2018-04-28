@@ -1,0 +1,36 @@
+.artist-info-card {
+	display: grid;
+	background: white;
+	border-radius: 2px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.artist-info {
+	padding: 20px;
+}
+
+.artist-sessions {
+	display: grid;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+@media (min-width: $mid-screen) {
+	.artist-info-card{
+		grid-template-columns: 300px auto;
+		grid-column-gap: 20px;
+	}
+	.artist-info {
+		padding: 0px 20px 0px 0px;
+	}
+	.artist-sessions {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: $large-screen) {
+	.artist-sessions {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}

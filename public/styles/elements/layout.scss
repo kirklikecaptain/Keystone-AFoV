@@ -4,14 +4,31 @@
 	box-sizing: border-box;
 }
 
+.img {
+	display: block;
+}
+
 .container {
 	max-width: 1400px;
 	margin: 0 auto;
 	padding: 20px;
 }
 
-.no-pad-marg {
+.no-pad {
 	padding: 0px;
 	margin: 0px;
 }
 
+.center-text {
+	text-align: center;
+}
+
+.vertical-filler {
+	min-height: 65vh;
+}
+
+.spacer {
+	border-bottom: 1px solid $light-grey;
+	height: 0px;
+	margin: 20px 0px;
+}

@@ -32,6 +32,14 @@ h3 {
 	font-size: 25px;
 }
 
-p _ {
+a {
+	color: $red;
+}
+
+p {
 	margin: 15px 0px;
+}
+
+.underline {
+	border-bottom: solid 1px $dark-grey;
 }

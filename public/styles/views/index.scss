@@ -39,7 +39,8 @@
 }
 
 .hero-song-description {
-  line-height: 1.5;
+	line-height: 1.6;
+	margin-bottom: 10px;
 }
 
 .recent-videos {
@@ -51,7 +52,8 @@
   border-radius: 2px;
   overflow: hidden;
   display: block;
-  text-decoration: none;
+	text-decoration: none;
+	background: white;
 }
 
 .card-img-box {
@@ -66,7 +68,7 @@
   left: -1px;
   mix-blend-mode: color;
   opacity: .8;
-  transition: .2s ease opacity;
+  transition: .4s ease opacity;
   &:hover {
     opacity: 0;
   }
@@ -78,20 +80,29 @@
   width: 100%;
 }
 
+.card-info {
+	padding: 20px;
+}
+
 .card-artist-name {
   position: absolute;
   left: 0;
   bottom: 0;
   color: white;
   margin: 0;
-  padding: 15px;
+	padding: 15px;
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 .card-song-title {
   font-size: 18px;
   margin: 0px;
-  padding: 15px;
-  background: white;
+}
+
+.post-date {
+	color: $mid-grey;
+	font-size: 12px;
+	margin: 10px 0px 0px 0px;
 }
 
 @media (min-width: $mid-screen) {
@@ -121,14 +132,13 @@
   }
 
   .hero-song-description {
-    font-size: 20px;
     padding-right: 50px;
   }
 
   .watch-button {
     display: inline-block;
     font-size: 20px;
-    padding: 15px 70px;
+    padding: 15px 50px;
   }
 
   .recent-videos {
