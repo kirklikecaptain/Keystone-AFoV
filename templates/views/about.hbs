@@ -1,5 +1,31 @@
 <div class="container">
 	<h3>About A Fistful of Vinyl</h3>
-	<h4>Our Mission</h4>
-	<h4>Who We Are</h4>
+	<div class="about-card">
+		{{#each about}}
+			<h1>{{header}}</h1>
+			<div class="about-text">
+				{{{text}}}
+			</div>
+			<div class="about-image"></div>
+			{{#if image.secure_url}}
+				<img src="{{image.secure_url}}">
+			{{else}}
+			{{/if}}
+			<div class="spacer"></div>
+		{{/each}}
+		<h1>Who We Are</h1>
+		<div class="contributor-cards">
+			{{#each contributors}}
+				<div class="contributor-card">
+					<img class="mugshot" src="{{mugshot.secure_url}}">
+					<div class="contributor-info">
+						<h2>{{name}}</h2>
+						<p>{{roles}}</p>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	</div>
 </div>
+
+<div>{{about}}</div>

@@ -1,19 +1,21 @@
 <div class="container vertical-filler">
+	<h3>Contact</h3>
 		{{#if enquirySubmitted}}
-		<div class="contact-card shadow">
+		<div class="contact-card shadow thank-you">
 			<div class="contact-header">
 				<h2>Thanks for reaching out!</h2>
 			</div>
-			<div class="contact-card-details">
-				<p class="center-text">We'll get back to you asap.</p>
-				<p class="center-text">💜</p>
-				<p class="center-text">- AFoV</p>
+			<div class="contact-card-details thank-you-text">
+				<div>
+					<p class="center-text">We'll get back to you asap.</p>
+					<p class="center-text">💜</p>
+					<p class="center-text">- AFoV</p>
+				</div>
 			</div>
 		</div>
 		{{else}}
 		<div class="contact-card shadow">
 			<div class="contact-header">
-				<div class="contact-overlay overlay"></div>
 				<h2>Contact A Fistful of Vinyl</h2>
 			</div>
 			<form method="post" class="contact-card-details">

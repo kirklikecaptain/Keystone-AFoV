@@ -190,11 +190,13 @@ p {
 .hero-info {
   padding: 20px 0px 0px 0px; }
 
+.hero-add-date {
+  color: #63707F;
+  margin: 5px 0px 10px 0px; }
+
 .hero-band-name,
 .hero-song-name,
 .hero-song-description {
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-  color: white;
   line-height: 1.2;
   margin: 0px;
   padding-bottom: 10px; }
@@ -279,6 +281,40 @@ p {
   .recent-videos {
     grid-template-columns: 1fr 1fr 1fr; } }
 
+.about-card {
+  background: white;
+  border-radius: 2px;
+  padding: 20px; }
+
+.contributor-cards {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 40px; }
+
+.contributor-card {
+  display: grid;
+  justify-content: center; }
+
+.mugshot {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  border-radius: 75px; }
+
+@media (min-width: 600px) {
+  .contributor-cards {
+    grid-template-columns: 1fr 1fr; } }
+
+@media (min-width: 1400px) {
+  .contributor-cards {
+    grid-template-columns: 1fr 1fr; }
+  .contributor-card {
+    margin-left: 40px;
+    padding: 20px;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-template-columns: auto 1fr; } }
+
 .artist-info-card {
   display: grid;
   background: white;
@@ -349,24 +385,31 @@ p {
 .contact-header {
   position: relative;
   overflow: hidden;
-  min-height: 150px;
-  background-image: url("../images/contact-card.jpg"); }
+  height: 230px;
+  background-image: url("../images/mixboard.png"); }
   .contact-header h2 {
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     padding: 20px 30px;
     color: white;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4); }
 
+.thank-you {
+  height: 545px; }
+
+.thank-you-text {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .contact-overlay {
-  background: #27CEC7;
+  background: #D7443F;
   mix-blend-mode: color; }
 
 .contact-card {
+  display: grid;
   background: white;
-  margin: 0 auto;
-  max-width: 800px;
   border-radius: 2px;
   overflow: hidden; }
   .contact-card .contact-card-details {
@@ -400,12 +443,19 @@ p {
     display: flex;
     justify-content: flex-end; }
 
+@media (min-width: 800px) {
+  .contact-card {
+    grid-template-columns: 1fr 1fr; }
+  .contact-header {
+    height: auto; } }
+
 .video-info {
   display: grid; }
 
 .offset-header {
   height: 150px;
-  margin-bottom: -140px; }
+  margin-bottom: -140px;
+  background: white; }
 
 .video-container {
   position: relative;

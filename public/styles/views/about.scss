@@ -1,0 +1,42 @@
+.about-card {
+	background: white;
+	border-radius: 2px;
+	padding: 20px;
+}
+
+.contributor-cards {
+	display: grid;
+	grid-column-gap: 20px;
+	grid-row-gap: 40px;
+}
+
+.contributor-card {
+	display: grid;
+	justify-content: center;
+}
+
+.mugshot {
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+	border-radius: 75px;
+}
+
+@media (min-width: $mid-screen) {
+	.contributor-cards {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: $huge-screen) {
+	.contributor-cards {
+		grid-template-columns: 1fr 1fr;
+	}
+	.contributor-card {
+		margin-left: 40px;
+		padding: 20px;
+		display: grid;
+		grid-column-gap: 40px;
+		grid-template-columns: auto 1fr;
+	}
+}

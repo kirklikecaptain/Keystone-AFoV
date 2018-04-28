@@ -1,21 +1,15 @@
 {{# each hero}}
-	<style>
-		.nav-bar {
-			background: {{artist.artistColor}};
-		}
-	</style>
-
-	<div class="hero" style="background: linear-gradient( rgba(0,0,0, 0.4), rgba(0, 0, 0, 0.4) ) {{artist.artistColor}};">
+	<div class="hero" style="background: white">
 		<div class="container">
 			<div class="hero-img-box shadow">
 				<img class="hero-img" src="{{thumbnail.secure_url}}" alt="{{songTitle}}">
-				{{!-- <div class="overlay" style="background: {{artist.artistColor}};"></div> --}}
 			</div>
 			<div class="hero-info">
 				<h1 class="hero-band-name">{{artist.artistName}}</h1>
-				<h2 class="hero-song-name sans">{{songTitle}}</h2>
+				<h2 class="hero-song-name sans" style=" color: {{artist.artistColor}};">{{songTitle}}</h2>
+				<p class="hero-add-date">Added: {{ _.uploadDate.format "MMMM D Y" }}</p>
 				<p class="hero-song-description">{{shortDescription}}</p>
-				<a class="watch-button" style="background-color: {{artist.artistColor}};" href="{{sessionUrl slug}}"><i class="material-icons">library_music</i> Watch</a>
+				<a class="watch-button shadow" style="background-color: {{artist.artistColor}};" href="{{sessionUrl slug}}"><i class="material-icons">library_music</i> Watch</a>
 			</div>
 		</div>
 	</div>

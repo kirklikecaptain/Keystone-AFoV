@@ -16,10 +16,11 @@ Contributor.add({
 	twitterHandle: { type: String },
 	twitterURL: { type: String },
 	emailAddress: { type: String },
+	order: { type: Types.Number },
 });
 
 Contributor.relationship({ ref: 'Session', refPath: 'contributors' });
 
-Contributor.defaultColumns = 'name, mugshot, emailAddress'
+Contributor.defaultColumns = 'name, mugshot, emailAddress, order';
 
 Contributor.register();

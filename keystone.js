@@ -45,6 +45,7 @@ keystone.set('nav', {
 	enquiries: 'enquiries',
 	contributors: 'contributors',
 	users: 'users',
+	about: 'abouts',
 });
 
 keystone.start();
