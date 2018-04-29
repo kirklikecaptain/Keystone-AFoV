@@ -1,8 +1,14 @@
 .nav-bar {
 	background: $black;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-	z-index: 10;
 }
+
+@media (max-width: $mid-screen) {
+	.nav-links {
+		max-height: 0px;
+		overflow: hidden;
+	}
+}
+
 
 .nav-logo-link {
 	display: block;
@@ -26,13 +32,19 @@
 	}
 }
 
+#menu-button {
+	display: none;
+}
+
 .nav-button-box {
 	display: flex;
 	justify-content: flex-end;
 }
 
 .nav-button {
-	width: 20px;
+	cursor: pointer;
+	width: 60px;
+	padding: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -53,6 +65,10 @@
 	width: 60%;
 }
 
+#menu-button:checked ~ .nav-links {
+	max-height: 100%;
+}
+
 @media (min-width: $mid-screen) {
 	.nav-bar {
 		height: 100px;
@@ -63,6 +79,11 @@
 			justify-content: space-between;
 		}
 	}
+
+	.active {
+		background: #272a30;
+	}
+
 	.nav-button-box {
 		display: none;
 	}

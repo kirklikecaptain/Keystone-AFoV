@@ -21,17 +21,18 @@
 				<a class="nav-logo-link" href="/">
 					<img class="nav-logo-img" src="/images/afov-logo.svg">
 				</a>
-				<div class="nav-links">
+				<input type="checkbox" id="menu-button">
+				<div class="nav-links mobile-nav">
 					{{# each navLinks}}
 						<a class="nav-link {{#ifeq ../section key}}active{{else}}{{/ifeq}}" href="{{ href }}">{{ label }}</a>
 					{{/ each}}
-					<div class="nav-button-box">
-						<div class="nav-button">
-							<div class="full-bar"></div>
-							<div class="mid-bar"></div>
-							<div class="full-bar"></div>
-						</div>
-					</div>
+				</div>
+				<div class="nav-button-box">
+					<label for="menu-button" class="nav-button">
+						<div class="full-bar"></div>
+						<div class="mid-bar"></div>
+						<div class="full-bar"></div>
+					</label>
 				</div>
 			</div>
 		</nav>
