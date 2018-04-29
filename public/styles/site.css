@@ -27,9 +27,9 @@
   margin: 20px 0px; }
 
 .heading-underline {
-  border-bottom: 1px solid #63707F;
-  padding-bottom: 10px;
-  margin-bottom: 20px; }
+  border-bottom: 1px solid #2B3138;
+  padding-bottom: 5px;
+  margin-bottom: 15px; }
 
 @media (min-width: 600px) {
   .container {
@@ -408,7 +408,8 @@ p {
   position: relative;
   overflow: hidden;
   height: 230px;
-  background-image: url("../images/mixboard.png"); }
+  background-image: url("../images/mixboard.png");
+  background-size: contain; }
   .contact-header h2 {
     position: absolute;
     left: 0;
@@ -519,7 +520,8 @@ p {
 .chip {
   display: flex;
   align-items: center;
-  margin-right: 20px; }
+  margin-right: 20px;
+  margin-bottom: 20px; }
   .chip img {
     display: inline-block;
     border-radius: 20px;
@@ -551,8 +553,6 @@ p {
   .video-info {
     grid-template-columns: auto 350px;
     grid-column-gap: 20px; }
-  .rel-sessions {
-    color: white; }
   .related-items {
     grid-template-columns: 1fr; } }
 
