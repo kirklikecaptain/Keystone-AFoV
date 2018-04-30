@@ -15,8 +15,8 @@
 }
 
 .no-pad {
-	padding: 0px;
-	margin: 0px;
+	padding: 0px !important;
+	margin: 0px !important;
 }
 
 .center-text {
@@ -34,7 +34,7 @@
 }
 
 .heading-underline {
-	border-bottom: 1px solid $dark-grey;
+	border-bottom: 1px solid $mid-grey;
 	padding-bottom: 5px;
 	margin-bottom: 15px;
 }

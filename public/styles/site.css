@@ -12,8 +12,8 @@
   padding: 10px; }
 
 .no-pad {
-  padding: 0px;
-  margin: 0px; }
+  padding: 0px !important;
+  margin: 0px !important; }
 
 .center-text {
   text-align: center; }
@@ -27,7 +27,7 @@
   margin: 20px 0px; }
 
 .heading-underline {
-  border-bottom: 1px solid #2B3138;
+  border-bottom: 1px solid #63707F;
   padding-bottom: 5px;
   margin-bottom: 15px; }
 
@@ -408,8 +408,7 @@ p {
   position: relative;
   overflow: hidden;
   height: 230px;
-  background-image: url("../images/mixboard.png");
-  background-size: contain; }
+  background: url("../images/mixboard.png"); }
   .contact-header h2 {
     position: absolute;
     left: 0;
@@ -508,7 +507,7 @@ p {
 
 .video-details {
   background: white;
-  padding: 1px 20px 20px 20px; }
+  padding: 20px; }
 
 .session-post-date {
   color: #63707F; }
@@ -521,7 +520,7 @@ p {
   display: flex;
   align-items: center;
   margin-right: 20px;
-  margin-bottom: 20px; }
+  margin-top: 10px; }
   .chip img {
     display: inline-block;
     border-radius: 20px;

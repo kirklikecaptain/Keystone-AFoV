@@ -6,8 +6,8 @@
 			<iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/{{data.session.youtubeVideoID}}?autoplay=1&modestbranding=1" frameborder="0" allowfullscreen></iframe>
 		</div>
 		<div class="video-details">
-			<h1 class="artist-name-header">{{data.session.artist.artistName}}</h1>
-			<h2 class="sans" style="color: {{data.session.artist.artistColor}}">{{data.session.songTitle}}</h2>
+			<h1 class="artist-name-header no-pad">{{data.session.artist.artistName}}</h1>
+			<h2 class="sans no-pad" style="color: {{data.session.artist.artistColor}}">{{data.session.songTitle}}</h2>
 			<p class="session-post-date" >Added: {{ data.session._.uploadDate.format "MMMM D Y" }}</p>
 			<p>{{data.session.shortDescription}}</p>
 			<h3>Artist Info</h3>
