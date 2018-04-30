@@ -7,7 +7,7 @@
 			<div class="hero-info">
 				<h1 class="hero-band-name">{{artist.artistName}}</h1>
 				<h2 class="hero-song-name sans" style=" color: {{artist.artistColor}};">{{songTitle}}</h2>
-				<p class="hero-add-date no-pad">Added: {{ _.uploadDate.format "MMMM D Y" }}</p>
+				<p class="hero-add-date">Added: {{ _.uploadDate.format "MMMM D Y" }}</p>
 				<p class="hero-song-description">{{shortDescription}}</p>
 				<a class="watch-button shadow" style="background-color: {{artist.artistColor}};" href="{{sessionUrl slug}}"><i class="material-icons">library_music</i> Watch</a>
 			</div>
