@@ -1,5 +1,4 @@
 // Simulate config options from your production environment by
-// customising the .env file in your project's root folder.
 require('dotenv').config();
 
 var keystone = require('keystone');
@@ -41,11 +40,11 @@ keystone.set('routes', require('./routes'));
 keystone.set('nav', {
 	artists: 'artists',
 	sessions: 'sessions',
+	about: 'abouts',
 	posts: ['posts', 'post-categories'],
 	enquiries: 'enquiries',
 	contributors: 'contributors',
 	users: 'users',
-	about: 'abouts',
 });
 
 keystone.start();

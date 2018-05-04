@@ -7,7 +7,7 @@
   display: block; }
 
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 10px; }
 
@@ -327,7 +327,7 @@ p {
   .contributor-cards {
     grid-template-columns: 1fr 1fr; } }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .contributor-cards {
     grid-template-columns: 1fr 1fr; }
   .contributor-card {
@@ -400,7 +400,7 @@ p {
   .artist-cards {
     grid-template-columns: 1fr 1fr 1fr; } }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .artist-cards {
     grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
@@ -510,7 +510,19 @@ p {
   padding: 20px; }
 
 .session-post-date {
-  color: #63707F; }
+  color: #63707F;
+  display: flex;
+  align-items: center; }
+
+.stats-count {
+  display: flex;
+  margin-right: 20px;
+  font-size: 16px; }
+  .stats-count i {
+    vertical-align: middle !important;
+    font-size: 16px !important;
+    display: inline-block;
+    margin-right: 10px; }
 
 .contributors {
   display: flex;
@@ -555,7 +567,7 @@ p {
   .related-items {
     grid-template-columns: 1fr; } }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .offset-header {
     height: 350px;
     margin-bottom: -340px; } }

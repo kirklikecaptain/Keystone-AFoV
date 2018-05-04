@@ -3,12 +3,16 @@
 	<div class="session-video-card shadow">
 		<div class="video-container" style="background: {{data.session.artist.artistColor}}">
 			<i class="material-icons">play_circle_filled</i>
-			<iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/{{data.session.youtubeVideoID}}?autoplay=1&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+			<iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/{{data.session.youtubeVideoID}}?autoplay=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
 		</div>
 		<div class="video-details">
 			<h1 class="artist-name-header no-pad">{{data.session.artist.artistName}}</h1>
 			<h2 class="sans no-pad" style="color: {{data.session.artist.artistColor}}">{{data.session.songTitle}}</h2>
-			<p class="session-post-date" >Added: {{ data.session._.uploadDate.format "MMMM D Y" }}</p>
+			<p class="session-post-date">
+				<span class="stats-count"><i class="material-icons">remove_red_eye</i>{{data.stats.viewCount}}</span>
+				<span class="stats-count"><i class="material-icons">thumb_up</i> {{data.stats.likeCount}}</span>
+				<span class="stats-count"><i class="material-icons">file_upload</i> {{ data.session._.uploadDate.format "MMMM D Y" }}</span>
+			</p>
 			<p>{{data.session.shortDescription}}</p>
 			<h3>Artist Info</h3>
 			{{{data.session.artist.artistBio}}}
@@ -49,6 +53,5 @@
 		</div>
 	</div>
 	{{else}}
-	<div></div>
 	{{/if}}
 </div>
