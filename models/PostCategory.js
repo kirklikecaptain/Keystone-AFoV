@@ -1,10 +1,5 @@
 var keystone = require('keystone');
 
-/**
- * PostCategory Model
- * ==================
- */
-
 var PostCategory = new keystone.List('PostCategory', {
 	autokey: { from: 'name', path: 'key', unique: true },
 });

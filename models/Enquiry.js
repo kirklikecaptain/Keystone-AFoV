@@ -1,11 +1,6 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
-/**
- * Enquiry Model
- * =============
- */
-
 var Enquiry = new keystone.List('Enquiry', {
 	nocreate: true,
 	noedit: true,

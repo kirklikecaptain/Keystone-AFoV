@@ -1,3 +1,5 @@
+// provided by keystone, not currently being used by afov.com... yet
+
 var keystone = require('keystone');
 var async = require('async');
 

@@ -3,7 +3,11 @@
 	<div class="session-video-card shadow">
 		<div class="video-container" style="background: {{data.session.artist.artistColor}}">
 			<i class="material-icons">play_circle_filled</i>
-			<iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/{{data.session.youtubeVideoID}}?autoplay=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+			<iframe
+				id="ytplayer"
+				type="text/html"
+				src="https://www.youtube.com/embed/{{data.session.youtubeVideoID}}?autoplay=0&modestbranding=1"
+				frameborder="0" allowfullscreen></iframe>
 		</div>
 		<div class="video-details">
 			<h1 class="artist-name-header no-pad">{{data.session.artist.artistName}}</h1>
@@ -35,23 +39,23 @@
 	</div>
 
 	{{#if data.related}}
-	<div class="related-videos">
-		<h3 class="rel-sessions heading-underline">More by {{data.session.artist.artistName}}</h3>
-		<div class="related-items">
-			{{#each data.related}}
-				<a href="{{sessionUrl slug}}" class="video-card shadow">
-					<div class="card-img-box">
-						<img class="video-img" src="{{thumbnail.secure_url}}">
-						<div class="overlay" style="background: {{artist.artistColor}};"></div>
-					</div>
-					<div class="card-info">
-						<h5 class="card-song-title sans" style=" color: {{artist.artistColor}};">{{songTitle}}</h5>
-						<p class="post-date" >{{ _.uploadDate.format "MMMM D Y" }}</p>
-					</div>
-				</a>
-			{{/each}}
+		<div class="related-videos">
+			<h3 class="rel-sessions heading-underline">More by {{data.session.artist.artistName}}</h3>
+			<div class="related-items">
+				{{#each data.related}}
+					<a href="{{sessionUrl slug}}" class="video-card shadow">
+						<div class="card-img-box">
+							<img class="video-img" src="{{thumbnail.secure_url}}">
+							<div class="overlay" style="background: {{artist.artistColor}};"></div>
+						</div>
+						<div class="card-info">
+							<h5 class="card-song-title sans" style=" color: {{artist.artistColor}};">{{songTitle}}</h5>
+							<p class="post-date" >{{ _.uploadDate.format "MMMM D Y" }}</p>
+						</div>
+					</a>
+				{{/each}}
+			</div>
 		</div>
-	</div>
 	{{else}}
 	{{/if}}
 </div>

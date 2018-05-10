@@ -36,6 +36,7 @@ exports = module.exports = function (req, res) {
 				.exec();
 
 			var ytquery = google.youtube({ version: 'v3', auth: process.env.YOUTUBE_KEY });
+
 			ytquery.videos.list({ id: result.youtubeVideoID, part: 'statistics' }, (err, res) => {
 				if (err) {
 					console.log(err);
@@ -47,11 +48,9 @@ exports = module.exports = function (req, res) {
 					next();
 				}
 			});
-
 		} catch (err) {
 			console.error(err);
 		}
-
 	});
 
 	view.render('session');

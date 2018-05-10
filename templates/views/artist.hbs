@@ -16,16 +16,16 @@
 	<h3 class="heading-underline">Sessions Featuring {{data.artist.artistName}}</h3>
 	<div class="artist-sessions">
 		{{# each data.sessions}}
-			<a href="{{sessionUrl slug}}" class="video-card shadow">
-					<div class="card-img-box">
-						<img class="video-img" src="{{thumbnail.secure_url}}">
-						<div class="overlay" style="background: {{artist.artistColor}};"></div>
-					</div>
-					<div class="card-info">
-						<h5 class="card-song-title sans" style=" color: {{artist.artistColor}};">{{songTitle}}</h5>
-						<p class="post-date" >{{ _.uploadDate.format "MMMM D Y" }}</p>
-					</div>
-				</a>
+		<a href="{{sessionUrl slug}}" class="video-card shadow">
+			<div class="card-img-box">
+				<img class="video-img" src="{{thumbnail.secure_url}}">
+				<div class="overlay" style="background: {{artist.artistColor}};"></div>
+			</div>
+			<div class="card-info">
+				<h5 class="card-song-title sans" style=" color: {{artist.artistColor}};">{{songTitle}}</h5>
+				<p class="post-date">{{ _.uploadDate.format "MMMM D Y" }}</p>
+			</div>
+		</a>
 		{{/each}}
 	</div>
 </div>

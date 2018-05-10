@@ -14,7 +14,9 @@ exports = module.exports = function (req, res) {
 	locals.enquirySubmitted = false;
 
 	// On POST requests, add the Enquiry item to the database
-	view.on('post', { action: 'contact' }, function (next) {
+	view.on('post', {
+		action: 'contact',
+	}, function (next) {
 
 		var newEnquiry = new Enquiry.model();
 		var updater = newEnquiry.getUpdateHandler(req);
