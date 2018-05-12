@@ -1,8 +1,8 @@
-#A Fistful of Website
+# A Fistful of Website
 
 The first legit site for A Fistful of Vinyl.
 
-##Code Stuff
+## Code Stuff
 Keystone.js : a mostly-headless MVC framework
 [Keystone Documentation](http://keystonejs.com/docs/)
 
@@ -13,15 +13,15 @@ Keystone.js : a mostly-headless MVC framework
 - Cloudinary CDN for images
 - Google API for funsies
 
-##Development tools
-###Nodemon for local server
+## Development Stuff
+### Nodemon for local server
 - Run ```nodemon keystone.js``` to start local server on localhost:3000.
 
-###Gulp for live reloading after scss changes
+### Gulp for live reloading after scss changes
 - Run ```gulp``` to start watching for changes to scss and hbs files.
 
-###Live-Reload watcher
+### Live-Reload watcher
 - Install and activate the [Live Reload Chrome Extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en).
 
-##ENV variables 
+### ENV variables 
 - Buried in a secret location far far away.
