@@ -1,9 +1,12 @@
 .artist-info-card {
 	display: grid;
-	background: white;
 	border-radius: 2px;
 	overflow: hidden;
 	margin-bottom: 20px;
+}
+
+.artist-card-img {
+	display: block;
 }
 
 .artist-info {

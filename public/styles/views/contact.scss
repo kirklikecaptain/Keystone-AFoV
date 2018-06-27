@@ -1,8 +1,11 @@
 .contact-header {
 	position: relative;
 	overflow: hidden;
-	height: 230px;
-	background: url("../images/mixboard.png");
+	height: 220px;
+	img {
+		width: 100%;
+		display: block;
+	}
 	h2 {
 		position: absolute;
 		left: 0;
@@ -35,7 +38,7 @@
 	overflow: hidden;
 
 	.contact-card-details {
-		padding: 30px;
+		padding: 24px;
 	}
 
 	label {
@@ -50,7 +53,7 @@
 		border: 1px solid #ddd;
 		border-radius: 5px;
 		width: 100%;
-		margin: 20px 0px;
+		margin: 5px 0px 16px 0px;
 		resize: none;
 	}
 
@@ -67,7 +70,7 @@
 		border-radius: 3px;
 		color: white;
 		background: $cyan;
-		cursor:pointer;
+		cursor: pointer;
 		display: block;
 	}
 
@@ -78,7 +81,7 @@
 
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
 	.contact-card {
 		grid-template-columns: 1fr 1fr;
 	}

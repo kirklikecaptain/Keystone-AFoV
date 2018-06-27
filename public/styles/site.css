@@ -249,7 +249,7 @@ p {
   left: -1px;
   mix-blend-mode: color;
   opacity: .8;
-  transition: .4s ease opacity; }
+  transition: .3s ease opacity; }
   .overlay:hover {
     opacity: 0; }
 
@@ -339,10 +339,12 @@ p {
 
 .artist-info-card {
   display: grid;
-  background: white;
   border-radius: 2px;
   overflow: hidden;
   margin-bottom: 20px; }
+
+.artist-card-img {
+  display: block; }
 
 .artist-info {
   padding: 20px; }
@@ -407,8 +409,10 @@ p {
 .contact-header {
   position: relative;
   overflow: hidden;
-  height: 230px;
-  background: url("../images/mixboard.png"); }
+  height: 220px; }
+  .contact-header img {
+    width: 100%;
+    display: block; }
   .contact-header h2 {
     position: absolute;
     left: 0;
@@ -435,7 +439,7 @@ p {
   border-radius: 2px;
   overflow: hidden; }
   .contact-card .contact-card-details {
-    padding: 30px; }
+    padding: 24px; }
   .contact-card label {
     font-family: 'Roboto Slab';
     font-size: 12px;
@@ -446,7 +450,7 @@ p {
     border: 1px solid #ddd;
     border-radius: 5px;
     width: 100%;
-    margin: 20px 0px;
+    margin: 5px 0px 16px 0px;
     resize: none; }
   .contact-card input:focus,
   .contact-card textarea:focus,
@@ -465,7 +469,7 @@ p {
     display: flex;
     justify-content: flex-end; }
 
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
   .contact-card {
     grid-template-columns: 1fr 1fr; }
   .contact-header {

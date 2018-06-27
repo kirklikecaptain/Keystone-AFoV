@@ -71,7 +71,8 @@
   left: -1px;
   mix-blend-mode: color;
   opacity: .8;
-  transition: .4s ease opacity;
+	transition: .3s ease opacity;
+
   &:hover {
     opacity: 0;
   }
