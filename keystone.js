@@ -10,6 +10,7 @@ keystone.init({
 
 	'sass': 'public',
 	'static': 'public',
+	'static options': { maxAge: '14d' },
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': '.hbs',
@@ -28,13 +29,16 @@ keystone.init({
 	'user model': 'User',
 
 });
+
 keystone.import('models');
+
 keystone.set('locals', {
 	_: require('lodash'),
 	env: keystone.get('env'),
 	utils: keystone.utils,
 	editable: keystone.content.editable,
 });
+
 keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
