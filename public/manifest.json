@@ -1,5 +1,6 @@
 {
     "name": "A Fistful of Vinyl",
+    "short_name": "AFoV",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",

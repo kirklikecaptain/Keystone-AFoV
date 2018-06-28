@@ -8,14 +8,14 @@
 	<div class="hero" style="background: white">
 		<div class="container">
 			<div class="hero-img-box shadow">
-				<img class="hero-img" src="{{thumbnail.secure_url}}" alt="{{songTitle}}">
+				<img class="hero-img" src="{{thumbnail.secure_url}}" alt="Photo of {{artist.artistName}}">
 			</div>
 			<div class="hero-info">
 				<h1 class="hero-band-name">{{artist.artistName}}</h1>
 				<h2 class="hero-song-name sans" style=" color: {{artist.artistColor}};">{{songTitle}}</h2>
 				<p class="hero-add-date">Added: {{ _.uploadDate.format "MMMM D Y" }}</p>
 				<p class="hero-song-description">{{shortDescription}}</p>
-				<a class="watch-button shadow" style="background-color: {{artist.artistColor}};" href="{{sessionUrl slug}}"><i class="material-icons">library_music</i> Watch</a>
+				<a aria-label="Play {{songTitle}}" class="watch-button shadow" style="background-color: {{artist.artistColor}};" href="{{sessionUrl slug}}"><i class="material-icons">library_music</i> Watch</a>
 			</div>
 		</div>
 	</div>
@@ -26,7 +26,7 @@
 		{{# each recent}}
 			<a href="{{sessionUrl slug}}" class="video-card shadow">
 				<div class="card-img-box">
-					<img class="video-img" src="{{thumbnail.secure_url}}">
+					<img class="video-img" src="{{thumbnail.secure_url}}" alt="Thumbnail from {{songTitle}} Video">
 					<div class="overlay" style="background: {{artist.artistColor}};"></div>
 					<h3 class="card-artist-name">{{artist.artistName}}</h3>
 				</div>

@@ -6,7 +6,7 @@
 	<div class="artist-info-card">
 		<div class="artist-card">
 			<div class="artist-card-img-box">
-				<img class="artist-card-img" src="{{data.artist.artistPicture.secure_url}}">
+				<img class="artist-card-img" src="{{data.artist.artistPicture.secure_url}}" alt="Photo of {{data.artist.artistName}}">
 				<div class="overlay" style="background: {{data.artist.artistColor}}"></div>
 			</div>
 		</div>
@@ -22,7 +22,7 @@
 		{{# each data.sessions}}
 		<a href="{{sessionUrl slug}}" class="video-card shadow">
 			<div class="card-img-box">
-				<img class="video-img" src="{{thumbnail.secure_url}}">
+				<img class="video-img" src="{{thumbnail.secure_url}}" alt="Thumbnail from {{data.artist.artistName}}">
 				<div class="overlay" style="background: {{artist.artistColor}};"></div>
 			</div>
 			<div class="card-info">
