@@ -2,6 +2,17 @@
 	<title>{{data.artist.artistName}}</title>
 </head>
 
+<style>
+	::selection {
+		color: white;
+  	background: {{data.artist.artistColor}}; /* WebKit/Blink Browsers */
+	}
+	::-moz-selection {
+		color: white;
+  	background: {{data.artist.artistColor}}; /* Gecko Browsers */
+	}
+</style>
+
 <section class="container">
 	<div class="artist-info-card">
 		<div class="artist-card">

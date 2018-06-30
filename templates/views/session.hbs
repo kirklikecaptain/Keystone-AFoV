@@ -3,6 +3,17 @@
 	<meta name="description" content="{{data.session.shortDescription}}">
 </head>
 
+<style>
+	::selection {
+		color: white;
+  	background: {{data.session.artist.artistColor}}; /* WebKit/Blink Browsers */
+	}
+	::-moz-selection {
+		color: white;
+  	background: {{data.session.artist.artistColor}}; /* Gecko Browsers */
+	}
+</style>
+
 
 <div class="offset-header"></div>
 <section class="container video-info">
