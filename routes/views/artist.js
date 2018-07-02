@@ -25,6 +25,7 @@ exports = module.exports = function (req, res) {
 				.model
 				.find({ artist: result._id })
 				.populate('artist')
+				.sort('-uploadDate')
 				.exec();
 			locals.data.artist = result;
 			locals.data.sessions = session;
