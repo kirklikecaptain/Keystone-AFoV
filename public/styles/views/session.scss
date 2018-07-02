@@ -117,6 +117,9 @@
 	.related-items {
 		grid-template-columns: 1fr;
 	}
+	.rel-sessions {
+		margin-top: 0px;
+	}
 }
 
 @media (min-width: $huge-screen) {
