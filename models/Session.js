@@ -14,7 +14,7 @@ Session.add({
 	artist: { type: Types.Relationship, ref: 'Artist' },
 	thumbnail: { type: Types.CloudinaryImage },
 	youtubeVideoID: { type: String },
-	uploadDate: { type: Types.Date },
+	uploadDate: { type: Types.Date, default: Date.now },
 	shortDescription: { type: Types.Textarea, height: 60 },
 	contributors: { type: Types.Relationship, ref: 'Contributor', many: true },
 });

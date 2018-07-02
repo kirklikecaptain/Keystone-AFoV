@@ -10,7 +10,7 @@ keystone.init({
 
 	'sass': 'public',
 	'static': 'public',
-	'static options': { maxAge: '5d' },
+	'static options': { maxAge: '1d' },
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': '.hbs',
