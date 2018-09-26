@@ -32,5 +32,4 @@ exports = module.exports = function (app) {
 	app.get('/about', routes.views.about);
 	app.get('/style', routes.views.style);
 	app.all('/contact', routes.views.contact);
-
 };

@@ -569,7 +569,9 @@ p {
     grid-template-columns: auto 350px;
     grid-column-gap: 20px; }
   .related-items {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .rel-sessions {
+    margin-top: 0px; } }
 
 @media (min-width: 1200px) {
   .offset-header {
