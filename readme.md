@@ -13,7 +13,7 @@ Keystone.js : a mostly-headless MVC framework
 - Express app
 - MongoDB
 - Cloudinary CDN for images
-- Google API for funsies
+- Youtube API for video stats 
 
 ## Development Stuff
 ### Nodemon for local server
