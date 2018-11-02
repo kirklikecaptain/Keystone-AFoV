@@ -33,6 +33,6 @@ exports = module.exports = function (app) {
 	app.get('/style', routes.views.style);
 	app.all('/contact', routes.views.contact);
 	app.get('/.well-known/acme-challenge/:content', function(req, res) {
-		res.send('po4kJqSobW6V-EK2Mgc1x-7Wr3EMLKvIzw8kDOJW3ww')
+		res.send('Nqb49asgeJpOS1x39iqtiyiNISMwu9vB89n2FzDuZoA')
 	})
 };
