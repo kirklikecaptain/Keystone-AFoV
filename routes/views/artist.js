@@ -24,6 +24,7 @@ exports = module.exports = function (req, res) {
 			var session = await keystone.list('Session')
 				.model
 				.find({ artist: result._id })
+				.where('status', 'published')
 				.populate('artist')
 				.sort('-uploadDate')
 				.exec();

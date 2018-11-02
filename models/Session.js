@@ -17,7 +17,8 @@ Session.add({
 	uploadDate: { type: Types.Date, default: Date.now },
 	shortDescription: { type: Types.Textarea, height: 60 },
 	contributors: { type: Types.Relationship, ref: 'Contributor', many: true },
+	status: { type: Types.Select, options: 'draft, published', default: 'draft'},
 });
 
-Session.defaultColumns = 'songTitle, artist, thumbnail, youtubeVideoID, uploadDate';
+Session.defaultColumns = 'songTitle, artist, thumbnail, youtubeVideoID, uploadDate, status';
 Session.register();

@@ -22,6 +22,7 @@ exports = module.exports = function (req, res) {
 			.findOne({
 				slug: locals.filters.session,
 			})
+			.where('status', 'published')
 			.populate('artist')
 			.populate('contributors');
 

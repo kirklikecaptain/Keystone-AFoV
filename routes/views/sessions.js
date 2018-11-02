@@ -9,6 +9,7 @@ exports = module.exports = function (req, res) {
 	view.query('sessions', keystone.list('Session')
 		.model
 		.find()
+		.where('status', 'published')
 		.populate('artist')
 		.sort('-uploadDate')
 	);
